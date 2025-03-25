@@ -1,1 +1,0 @@
-import{_ as n}from"./BOm0KaUg.js";import{l as r,I as s,k as t,ak as a}from"./DMrk-Gbu.js";const _={};function c(o,m){const e=n;return t(),s(e,a(o.$attrs,{loading:"lazy"}),null,16)}const f=Object.assign(r(_,[["render",c]]),{__name:"ProseImg"});export{f as default};
