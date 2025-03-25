@@ -2,6 +2,7 @@
     <NuxtLink v-for="post in allPosts" :key="post.path" :to="post.path">
       <h2>{{ post.title }}</h2>
       <p>{{ post.description }}</p>
+      <p>{{ formatDate(post.date) }}</p>
     </NuxtLink>
   </template>
 
@@ -13,6 +14,16 @@ const { data: allPosts } = await useAsyncData(route.path, () => {
     .all()
 })
 
+function formatDate(inputDate) {
+  const date = new Date(inputDate);
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  const day = date.getDate();
+//   const formattedDate = day + ". " + months[month] + " " + year;
+//   const formattedDate = day + "." + (month+1) + "." + year;
+  const formattedDate = year + "." + (month+1) + "." + day;
+  return formattedDate;
+}
 // const allPosts = await queryCollection('blog').order('date',"DESC").all()
 
 

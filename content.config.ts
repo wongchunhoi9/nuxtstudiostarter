@@ -10,7 +10,9 @@ export default defineContentConfig({
       type: 'page',
       source: 'blog/**',
       schema: z.object({
-        date: z.date()
+        date: z.date(),
+        tags: z.array(z.string()),
+        image: z.string(),
       })
     })
   }
