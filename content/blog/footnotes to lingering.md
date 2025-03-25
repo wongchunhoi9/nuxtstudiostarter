@@ -6,7 +6,7 @@ tags:
   - ABC
   - asda
   - ""
-image: img/blog/2024-12-01_16.37.24.jpg
+image: /img/blog/2024-12-01_16.37.24.jpg
 ---
 
 # Footnotes To Lingering page
