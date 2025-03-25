@@ -16,8 +16,22 @@ export default defineNuxtConfig({
       xl: 1280,
       xxl: 1536,
       '2xl': 1536
-    }
-  },
+    },
+    presets: {
+      avatar: {
+        modifiers: {
+          format: 'jpg',
+          width: 50,
+          height: 50
+          }
+      },
+      preview: {
+        modifiers: {
+          format: 'jpg',
+          width: 1024,
+          }
+      }
+    },
   devtools: { enabled: true },
   future: {
     compatibilityVersion: 4,
