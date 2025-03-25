@@ -31,7 +31,8 @@ export default defineNuxtConfig({
           width: 1024,
           }
       }
-    },
+    }
+  },
   devtools: { enabled: true },
   future: {
     compatibilityVersion: 4,
