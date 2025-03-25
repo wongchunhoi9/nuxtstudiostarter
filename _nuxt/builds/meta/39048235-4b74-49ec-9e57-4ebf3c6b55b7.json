@@ -1,0 +1,1 @@
+{"id":"39048235-4b74-49ec-9e57-4ebf3c6b55b7","timestamp":1742915895877,"matcher":{"static":{"/__nuxt_content/about/sql_dump":{"prerender":true},"/__nuxt_content/blog/sql_dump":{"prerender":true}},"wildcard":{},"dynamic":{}},"prerendered":["/","/blog","/about","/blog/bar","/blog/.testing-123","/blog/foo","/blog/footnotes-to-lingering"]}
