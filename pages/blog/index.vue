@@ -14,7 +14,7 @@ const { data: allPosts } = await useAsyncData(route.path, () => {
     .all()
 })
 
-function formatDate(inputDate) {
+function formatDate(inputDate: string | number | Date) {
   const date = new Date(inputDate);
   const year = date.getFullYear();
   const month = date.getMonth();
