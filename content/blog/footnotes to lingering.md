@@ -6,7 +6,7 @@ tags:
   - ABC
   - asda
   - ""
-image: /img/blog/2024-12-01_16.37.24.jpg
+image: /img/blog/att.jsHp7UKQOzoZcjWTjUaYFBBzaAPo4CYquUA8OeBP160.jpg
 ---
 
 # Footnotes To Lingering page
@@ -17,4 +17,4 @@ image: /img/blog/2024-12-01_16.37.24.jpg
 Testing Prose H1
 ::
 
-![2024-12-29 16.37.04.jpg](/img/blog/2024-12-29-16.37.04.jpg)
+![2024-12-29 16.37.04.jpg](/img/blog/att.jsHp7UKQOzoZcjWTjUaYFBBzaAPo4CYquUA8OeBP160.jpg)
