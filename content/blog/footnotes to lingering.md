@@ -21,7 +21,6 @@ Testing Prose H1
 
 adding content from ios
 
-Image uploaded from iPhone
 ![IMG\_0083.jpeg](/img/blog/IMG_0083.jpeg)
 
 image rotate in MacOS Preview
