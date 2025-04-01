@@ -23,6 +23,10 @@ adding content from ios
 
 ![IMG\_0083.jpeg](/img/blog/IMG_0083.jpeg)
 
-image rotate in MacOS Preview
+Testing another image upload from safari in iOS
+
+![IMG\_0224.jpeg](/img/testing/IMG_0224.jpeg)
+
+image rotate in MacOS Previewhh
 
 ![IMG\_0083\_rotate.jpeg](/img/testing/IMG_0083_rotate.jpeg)
