@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   image: {
     quality: 80 ,
     format: ['webp'],
+    rotate: null,
     screens: {
       xs: 320,
       sm: 640,
