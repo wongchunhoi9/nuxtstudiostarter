@@ -1,7 +1,7 @@
 ---
 title: 'hardworking circuit #1.3 勤力電路＃1.3 '
 description: 'hardworking circuit#1 is a realization of a schema of monotonous, repetitive circuit, using as many units as possible of relay switch to bridge up the sequential extension of cables, merely for the purpose of electricity connection 勤力電路#1 實現了一個單調、重複的電路系統，以大量繼電器連接，順序延長成極長的電線，只不過就是為了通電。'
-date: 2016-12-11
+Creationdate: 2016-12-11
 year: '2016'
 draft: 'true'
 layout: work
