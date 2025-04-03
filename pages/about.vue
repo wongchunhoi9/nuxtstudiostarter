@@ -2,7 +2,7 @@
 
 <div>
     <h1>
-        about page
+        about page see if it works? 
     </h1>   
     <div>
         <ContentRenderer
