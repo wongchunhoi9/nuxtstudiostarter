@@ -16,7 +16,7 @@ In their debut exhibition, artist duo Noisy Plaster (Man Mei-to and Wong Chun-ho
 
 Opening : 8.3.2025 ( Sat ) | 6 pm - 9 pm Opening Performance starts at 7:30 pm
 
-- Event - Drifting Together : 22.3.2025 ( Sat ) | 2 pm https\://forms.gle/uLVNmbRPDDi4Lm2N9 Reading Group : 29.3.2025 ( Sat ）| 2 pm https\://forms.gle/uuqk3FJ8qwLnktEK7
+- Event - Drifting Together : 22.3.2025 ( Sat ) | 2 pm <https://forms.gle/uLVNmbRPDDi4Lm2N9> Reading Group : 29.3.2025 ( Sat ）| 2 pm <https://forms.gle/uuqk3FJ8qwLnktEK7>
 
 Presented by : Noisy Plaster @noisy\_plaster ( MAN Mei-to @manmeito / WONG Chun-hoi @wongchunhoi9） Visual Design : Lokto @l0kt0 Venue Support : POINTSMAN @pointsman\_artspace
 
