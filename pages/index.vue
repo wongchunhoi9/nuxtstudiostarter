@@ -1,9 +1,5 @@
 <template>
 
- 
-
-
-    
     <main>
         <div class="md:flex flex-row-reverse ">
             <section class="md:max-w-lg md:p-4 p-2 md:border-l-2 md:border-black md:flex-shrink-0">
