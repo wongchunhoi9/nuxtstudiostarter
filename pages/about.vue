@@ -11,7 +11,7 @@
             :head="false"
         />
     </div>
-    <div>
+    <!-- <div>
         <ContentRenderer
             v-if="cv"
             :value="cv"
@@ -31,7 +31,7 @@
             :value="sounddesign"
             :head="false"
         />
-    </div>
+    </div> -->
 </div>    
 
 </template>
