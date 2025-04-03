@@ -19,7 +19,7 @@ export default defineContentConfig({
       type:'page',
       source: {
         include: "**/*",
-        exclude: ["about/**","news.md"],
+        exclude: ["about/**"],
         prefix: '/',
       },
       schema: z.object({

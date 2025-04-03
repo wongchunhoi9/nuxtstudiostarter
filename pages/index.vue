@@ -22,7 +22,7 @@
                     </h1>
                         <div class="lg:columns-2 xl:columns-3 2xl:columns-4 gap-0">
                             <NuxtLink v-for="post in allPosts" :key="post.path" :to="post.path" class="pb-8 md:pb-0">
-                            <!-- <h2>{{ post.title }}</h2> -->
+                            <h2>{{ post.title }}</h2>
                             <!-- <p>{{ post.description }}</p> -->
                             
                              <!-- <NuxtImg :src="`${post.image}`" :alt="post.title" class=" w-full inset-0 bg-cover bg-center z-0" /> -->
@@ -50,6 +50,7 @@ const { data: news } = await useAsyncData(() => queryCollection('allContent').pa
 const route = useRoute()
 const { data: allPosts } = await useAsyncData(route.path, () => {
   return queryCollection('allContent')
+    .where('date','IS NOT NULL')
     .order('date', 'DESC')
     .all()
 })

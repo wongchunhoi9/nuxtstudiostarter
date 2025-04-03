@@ -1,7 +1,7 @@
 ---
 title: title 筆記
 description: sdadasdasda sdadsad dad
-date: 2025-03-21T00:00:00.000Z
+date: 2025-03-21
 tags:
   - ABC
   - asda
