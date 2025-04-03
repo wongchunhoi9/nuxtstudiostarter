@@ -1,6 +1,6 @@
 <template>
     <nav class="w-full px-6 bg-transparent">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between align-middle">
 
   
         <!-- Navbar -->
@@ -37,7 +37,7 @@
 
   
         <!-- Drawer Menu -->
-        <aside class="p-5 transform top-0 left-0 w-64 bg-gradient-to-b border-2 border-black from-[#d5f4ff] via-[#fcf881] to-[#d6e7af] fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
+        <aside class="p-5 transform top-0 left-0 w-64 bg-white border-2 border-black  fixed h-full overflow-auto ease-in-out transition-all duration-100 z-30" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
           
           <div class="close">
             <button class="absolute top-0 right-0 mt-4 mr-4" @click=" isOpen = false">
@@ -118,8 +118,10 @@
 
   <style scoped>
     .router-link-active {
-      @apply font-bold text-black rounded p-4 md:p-0 shadow-emerald-400 shadow-xl bg-[#5bffa7] animate-bounce;
+      @apply font-bold text-black rounded p-4 md:p-0 shadow-emerald-400 shadow-xl bg-[#5bffa7] animate-bounce-slow;
     }
+
+    
   </style>
   
   <script>

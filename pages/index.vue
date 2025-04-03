@@ -8,7 +8,7 @@
                 <div v-else>NEWS not found</div>
             </section>
 
-            <section class="md:max-w-8xl md:p-4 p-0  md:border-black md:h-min">
+            <section class="md:max-w-10xl md:p-4 p-0  md:border-black md:h-min">
                 <!-- <RecentWork :displayPost="9"/>
                 <RecentBlog :displayPost="4" /> -->
                 <!-- <RecentPosts :displayPost="30" /> -->

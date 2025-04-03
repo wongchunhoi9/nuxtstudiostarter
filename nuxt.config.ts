@@ -4,7 +4,13 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/mdc',
   ],
+  tailwindcss: {
+    exposeConfig: true,
+    viewer: true,
+    // and more...
+  },
   content:{
     build: { 
       markdown: {

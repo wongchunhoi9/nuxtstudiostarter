@@ -22,7 +22,7 @@ export default defineContentConfig({
     }),
     work: defineCollection({
       type: 'page',
-      source: 'work/**',
+      source: 'work/*.md',
       schema: z.object({
         date: z.date(),
         tags: z.array(z.string()),
