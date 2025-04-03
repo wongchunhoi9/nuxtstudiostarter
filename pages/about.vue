@@ -2,7 +2,7 @@
 
 <div>
     <h1>
-        about page see if it works?
+        ABOUT
     </h1>   
     <div>
         <ContentRenderer

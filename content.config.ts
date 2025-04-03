@@ -20,6 +20,15 @@ export default defineContentConfig({
         image: z.string(),
       })
     }),
+    work: defineCollection({
+      type: 'page',
+      source: 'work/**',
+      schema: z.object({
+        date: z.date(),
+        tags: z.array(z.string()),
+        image: z.string(),
+      })
+    }),
     allContent: defineCollection({
       type:'page',
       source: {
