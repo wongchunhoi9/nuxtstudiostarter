@@ -11,7 +11,7 @@
             :head="false"
         />
     </div>
-    <div>
+    <!-- <div>
         <ContentRenderer
             v-if="cv"
             :value="cv"
@@ -31,7 +31,7 @@
             :value="sounddesign"
             :head="false"
         />
-    </div>
+    </div> -->
 </div>    
 
 </template>
@@ -39,9 +39,9 @@
 <script setup lang="ts">
 
 const biography = await queryCollection('about').path('/about/biography').first()
-const cv = await queryCollection('about').path('/about/cv').first()
-const bibliography = await queryCollection('about').path('/about/bibliography').first()
-const sounddesign = await queryCollection('about').path('/about/sounddesign').first()
+// const cv = await queryCollection('about').path('/about/cv').first()
+// const bibliography = await queryCollection('about').path('/about/bibliography').first()
+// const sounddesign = await queryCollection('about').path('/about/sounddesign').first()
 
 // if (!cv.value) {
 //   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
