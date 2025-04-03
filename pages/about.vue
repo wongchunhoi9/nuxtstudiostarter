@@ -38,7 +38,7 @@
 
 <script setup lang="ts">
 
-const biography = await queryCollection('about').path('/about/biography').first()
+const biography = await queryCollection('about').path('/biography').first()
 // const cv = await queryCollection('about').path('/about/cv').first()
 // const bibliography = await queryCollection('about').path('/about/bibliography').first()
 // const sounddesign = await queryCollection('about').path('/about/sounddesign').first()
