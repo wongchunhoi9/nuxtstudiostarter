@@ -5,6 +5,16 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
   ],
+  content:{
+    build: { 
+      markdown: {
+        highlight: {
+          // Theme used in all color schemes.
+          theme: 'github-light',
+        }
+      }
+    }
+  },
   image: {
     quality: 80 ,
     format: ['webp'],
@@ -30,6 +40,7 @@ export default defineNuxtConfig({
         modifiers: {
           format: 'jpg',
           width: 1024,
+          rotate: null,
           }
       }
     }
