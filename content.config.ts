@@ -19,8 +19,8 @@ export default defineContentConfig({
       type:'page',
       source: {
         include: "**/*",
-        // exclude: ["about/**"],
-        // prefix: '/',
+        exclude: ["about/**"],
+        prefix: '/',
       },
       schema: z.object({
         date: z.date(),
