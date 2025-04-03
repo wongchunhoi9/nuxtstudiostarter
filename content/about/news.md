@@ -26,4 +26,110 @@ Supported by | Hong Kong Arts Development Council \*Hong Kong Arts Development C
 
 8-30.3.2025 1 pm -7 pm | 週一至週日 POINTSMAN 西營盤 第二街 119號
 
+Prose css reference
+
+h1 {
+
+@apply text-2xl sm\:text-3xl text-zinc-900 dark\:text-zinc-100 italic font-\[600] mb-6 mt-8;
+
+}
+
+h2 {
+
+@apply text-xl sm\:text-2xl text-zinc-900 dark\:text-zinc-100 mb-4 mt-8;
+
+}
+
+h3 {
+
+@apply text-lg sm\:text-xl text-zinc-900 dark\:text-zinc-100 mb-4 mt-6;
+
+}
+
+h4 {
+
+@apply text-base sm\:text-lg text-zinc-900 dark\:text-zinc-100 mb-4 mt-6;
+
+}
+
+h5 {
+
+@apply text-base text-zinc-900 dark\:text-zinc-100 mb-4 mt-6;
+
+}
+
+p {
+
+@apply mb-4 mt-0;
+
+}
+
+a {
+
+@apply text-blue-500 dark\:text-blue-500 underline hover\:text-blue-600;
+
+}
+
+pre {
+
+@apply text-sm sm\:text-base text-zinc-900 dark\:text-zinc-100 my-4 p-4 bg-neutral-100 dark\:bg-neutral-800 rounded-lg overflow-x-auto;
+
+}
+
+code {
+
+@apply text-zinc-900 dark\:text-zinc-100 text-sm px-1.5 py-0.5 bg-neutral-100 dark\:bg-neutral-800 rounded;
+
+}
+
+strong {
+
+@apply text-neutral-900 dark\:text-neutral-100 font-\[500];
+
+}
+
+ul, ol {
+
+@apply mb-4 mt-4 pl-6;
+
+}
+
+li {
+
+@apply mb-1;
+
+}
+
+blockquote {
+
+@apply pl-4 border-l-4 border-neutral-300 dark\:border-neutral-700 my-4 italic;
+
+}
+
+hr {
+
+@apply my-8 border-neutral-200 dark\:border-neutral-800;
+
+}
+
+img {
+
+@apply my-4 rounded-lg max-w-full;
+
+}
+
+figure {
+
+@apply my-4;
+
+}
+
+figcaption {
+
+@apply text-sm text-neutral-500 dark\:text-neutral-400 mt-2;
+
+}
+
+}
+
 ![alt text](/img/blog/IMG_7676.jpeg)
