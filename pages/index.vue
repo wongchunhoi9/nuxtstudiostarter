@@ -25,7 +25,7 @@
                             <!-- <h2>{{ post.title }}</h2> -->
                             <!-- <p>{{ post.description }}</p> -->
                             
-                             <NuxtImg :src="`${post.image}`" :alt="post.title" class=" w-full inset-0 bg-cover bg-center z-0" />
+                             <!-- <NuxtImg :src="`${post.image}`" :alt="post.title" class=" w-full inset-0 bg-cover bg-center z-0" /> -->
                             </NuxtLink>
                         </div>
                 </div>
