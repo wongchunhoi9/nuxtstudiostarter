@@ -13,7 +13,7 @@
 
 <div>
     Testing nuxt Image 
-    <NuxtImg src="img/testing/IMG_7676.JPG" class="w-full"/>
+    <NuxtImg src="img/testing/IMG_7676.JPG" class="w-full" :modifiers="{ rotate: null }"/>
     
 </div>
 </template>
