@@ -5,11 +5,7 @@
         about page see if it works?
     </h1>   
     <div>
-        <ContentRenderer
-            v-if="biography"
-            :value="biography"
-            :head="false"
-        />
+        <ContentRenderer :value="biography"/>
     </div>
     <!-- <div>
         <ContentRenderer
