@@ -8,8 +8,8 @@
         <div class="md:flex flex-row-reverse ">
             <section class="md:max-w-lg md:p-4 p-2 md:border-l-2 md:border-black md:flex-shrink-0">
                 News
-                <!-- <ContentRenderer v-if="news" :value="news" />
-                <div v-else>NEWS not found</div> -->
+                <ContentRenderer v-if="news" :value="news" />
+                <div v-else>NEWS not found</div>
             </section>
 
             <section class="md:max-w-8xl md:p-4 p-0  md:border-black md:h-min">
@@ -45,7 +45,7 @@
 
 
 <script setup lang="ts">
-// const { data: news } = await useAsyncData(() => queryCollection('allContent').path('/news').first())
+const { data: news } = await useAsyncData(() => queryCollection('about').path('/about/news').first())
 
 // const route = useRoute()
 // const { data: allPosts } = await useAsyncData(route.path, () => {
