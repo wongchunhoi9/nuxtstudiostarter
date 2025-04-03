@@ -1,1 +1,0 @@
-import{l as c}from"./Cu0EAc-s.js";const t={};function e(n,r){return" Temp contact page "}const a=c(t,[["render",e]]);export{a as default};
