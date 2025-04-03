@@ -7,9 +7,9 @@
     <main>
         <div class="md:flex flex-row-reverse ">
             <section class="md:max-w-lg md:p-4 p-2 md:border-l-2 md:border-black md:flex-shrink-0">
-
-                <ContentRenderer v-if="news" :value="news" />
-                <div v-else>NEWS not found</div>
+                News
+                <!-- <ContentRenderer v-if="news" :value="news" />
+                <div v-else>NEWS not found</div> -->
             </section>
 
             <section class="md:max-w-8xl md:p-4 p-0  md:border-black md:h-min">
@@ -21,12 +21,12 @@
                     index page
                     </h1>
                         <div class="lg:columns-2 xl:columns-3 2xl:columns-4 gap-0">
-                            <NuxtLink v-for="post in allPosts" :key="post.path" :to="post.path" class="pb-8 md:pb-0">
+                            <!-- <NuxtLink v-for="post in allPosts" :key="post.path" :to="post.path" class="pb-8 md:pb-0">
                             <h2>{{ post.title }}</h2>
-                            <!-- <p>{{ post.description }}</p> -->
+                            <p>{{ post.description }}</p>
                             
-                             <!-- <NuxtImg :src="`${post.image}`" :alt="post.title" class=" w-full inset-0 bg-cover bg-center z-0" /> -->
-                            </NuxtLink>
+                             <NuxtImg :src="`${post.image}`" :alt="post.title" class=" w-full inset-0 bg-cover bg-center z-0" />
+                            </NuxtLink> -->
                         </div>
                 </div>
             </section>
@@ -45,14 +45,14 @@
 
 
 <script setup lang="ts">
-const { data: news } = await useAsyncData(() => queryCollection('allContent').path('/news').first())
+// const { data: news } = await useAsyncData(() => queryCollection('allContent').path('/news').first())
 
-const route = useRoute()
-const { data: allPosts } = await useAsyncData(route.path, () => {
-  return queryCollection('allContent')
-    .where('date','IS NOT NULL')
-    .order('date', 'DESC')
-    .all()
-})
+// const route = useRoute()
+// const { data: allPosts } = await useAsyncData(route.path, () => {
+//   return queryCollection('allContent')
+//     .where('date','IS NOT NULL')
+//     .order('date', 'DESC')
+//     .all()
+// })
 
 </script>

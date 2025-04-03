@@ -15,18 +15,18 @@ export default defineContentConfig({
         image: z.string(),
       })
     }),
-    allContent: defineCollection({
-      type:'page',
-      source: {
-        include: "**/*",
-        // exclude: ["about/**"],
-        // prefix: '/',
-      },
-      schema: z.object({
-        date: z.date(),
-        tags: z.array(z.string()),
-        image: z.string(),
-      }),
-    }),
+    // allContent: defineCollection({
+    //   type:'page',
+    //   source: {
+    //     include: "**/*",
+    //     // exclude: ["about/**"],
+    //     // prefix: '/',
+    //   },
+    //   schema: z.object({
+    //     date: z.date(),
+    //     tags: z.array(z.string()),
+    //     image: z.string(),
+    //   }),
+    // }),
   }
 })
