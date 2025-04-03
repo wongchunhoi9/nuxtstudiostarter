@@ -2,7 +2,7 @@
 
 <div>
     <h1>
-        about page see if it works? 
+        about page see if it works?
     </h1>   
     <div>
         <ContentRenderer
@@ -11,14 +11,14 @@
             :head="false"
         />
     </div>
-    <div>
+    <!-- <div>
         <ContentRenderer
             v-if="cv"
             :value="cv"
             :head="false"
         />
-    </div>
-    <div>
+    </div> -->
+    <!-- <div>
         <ContentRenderer
             v-if="bibliography"
             :value="bibliography"
@@ -31,7 +31,7 @@
             :value="sounddesign"
             :head="false"
         />
-    </div>
+    </div> -->
 </div>    
 
 </template>
