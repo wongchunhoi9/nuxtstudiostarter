@@ -10,9 +10,9 @@ date: 2024-12-12
 
 **Bold.** And *italic*
 
-*Try d* different []color to see if it is [possible ?]{.Color:red;}
+*Try d* different [] color to see if it is [possible]{.Color:red;} ?
 
-Hello :br-i am bar. Nice to meet 1
+Hello :br-i am bar. Nice to meet 1try another [inline css]{class=""}
 
 you
 
