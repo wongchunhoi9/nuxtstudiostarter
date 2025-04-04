@@ -12,13 +12,17 @@ date: 2024-12-12
 
 *Try d* different [] color to see if it is [possible]{.Color:red;} ?
 
-Hello :br-i am bar. Nice to meet 1try another [inline css]{class=""}
+Hello :br-i am bar. Nice to meet 1try another [inline css]{class}
 
 you
 
 ![IMG\_0279.jpeg](/img/testing/IMG_0279.jpeg)
 
 This is another line break
+
+## try another image upload from iOS
+
+![IMG\_0173.jpeg](/img/testing/IMG_0173.jpeg)
 
 And end of the blog here
 
