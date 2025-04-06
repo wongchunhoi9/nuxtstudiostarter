@@ -1,13 +1,14 @@
 <template>
 
-  <div class="lg:columns-2 xl:columns-3 2xl:columns-4 gap-0">
-    <div>
+  <div class="container mx-auto md:px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2  md:p-4 pb-8">
 
       <NuxtLink v-for="post in allPosts" :key="post.path" :to="post.path">
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.description }}</p>
+        <h2 class=" text-xl">{{ post.title }}</h2>
+        <!-- <p>{{ post.description }}</p> -->
         <p>{{ formatDate(post.date) }}</p>
          <NuxtImg :src="`${post.image}`" :alt="post.title" class=" w-full inset-0 bg-cover bg-center z-0" />
+         <p v-for="(category, n) in post.category" :key="n" class="inline-block text-xs px-3 bg-gray-100 mr-2" > {{ category }}  </p>
       </NuxtLink>
     </div>
   </div>
@@ -28,7 +29,8 @@ function formatDate(inputDate: string | number | Date) {
   const day = date.getDate();
 //   const formattedDate = day + ". " + months[month] + " " + year;
 //   const formattedDate = day + "." + (month+1) + "." + year;
-  const formattedDate = year + "." + (month+1) + "." + day;
+  // const formattedDate = year + "." + (month+1) + "." + day;
+  const formattedDate = year;  //display year only
   return formattedDate;
 }
 // const allPosts = await queryCollection('blog').order('date',"DESC").all()

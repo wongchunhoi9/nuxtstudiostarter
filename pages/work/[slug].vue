@@ -6,6 +6,8 @@ const { data: post } = await useAsyncData(`work-${slug}`, () => {
 </script>
 
 <template>
-  <!-- Render the blog post as Prose & Vue components -->
-  <ContentRenderer :value="post" />
+  <div class="container mx-auto md:px-4">
+    <!-- Render the blog post as Prose & Vue components -->
+    <ContentRenderer :value="post" />
+  </div>
 </template>

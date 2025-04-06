@@ -8,6 +8,10 @@ export default {
         'relayorange':'#ffd415',
         'greenled':'#5bffa7'
       },
+      aspectRatio: {
+        '4/3': '4 / 3',
+        '9/16': '9 / 16',
+      },
       animation: {
         'bounce-slow': 'bounce 5s infinite',
       }
