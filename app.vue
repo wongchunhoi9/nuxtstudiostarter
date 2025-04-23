@@ -9,3 +9,5 @@
       <NuxtLoadingIndicator color="#8CFCAF" /> <!-- here -->
   </NuxtLayout>
   </template>
+
+

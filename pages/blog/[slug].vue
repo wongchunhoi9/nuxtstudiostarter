@@ -7,5 +7,6 @@ const { data: post } = await useAsyncData(`blog-${slug}`, () => {
 
 <template>
   <!-- Render the blog post as Prose & Vue components -->
+  <h1>{{ post.title }}</h1>
   <ContentRenderer :value="post" />
 </template>

@@ -1,5 +1,5 @@
 ---
-Title: 'Wong Chun Hoi Full CV'
+title: 'Wong Chun Hoi Full CV'
 description: 'meta description of the page'
 updated: '2022-12-31'
 ---

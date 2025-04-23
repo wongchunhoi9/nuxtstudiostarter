@@ -1,4 +1,5 @@
 ---
+title: blog post 1
 date: 2024-12-12
 ---
 

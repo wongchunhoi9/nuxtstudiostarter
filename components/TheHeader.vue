@@ -4,6 +4,8 @@
 
 
         <NavigationMenu3 />
+        <!-- <SearchBarMinisearch /> -->
+            <!-- <SearchBar /> -->
 
         
     </div>

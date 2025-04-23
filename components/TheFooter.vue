@@ -46,7 +46,7 @@
 <footer class="bg-white border-t-2 border-t-black mt-1">
     <div class="mx-auto w-full max-w-screen-2xl p-4 py-6 lg:py-8">
       <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"><span class="copyleft">&copy;</span> 2025 <a href="https://flowbite.com/" class="hover:underline">wongchunhoi9</a>
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"><span class="copyleft">&copy;</span> 2025 <a href="https://wongchunhoi9.com/" class="hover:underline">wongchunhoi9</a>
           </span>
           <div class="flex mt-4 sm:justify-center sm:mt-0">
               
