@@ -21,8 +21,8 @@ const result = computed(() => fuse.search(toValue(query)).slice(0, 10))
     <div>
 
         <input v-model="query" placeholder="Search..." class="w-1/4 border-b-1" />
-        <ul>
-            <li v-for="link of result" :key="link.item.id" class="mt-2">
+        <ul class="absolute z-10 bg-white border-2">
+            <li v-for="link of result" :key="link.item.id" class="mt-2 border-2 hover:bg-orange-50">
                 <NuxtLink :to="link.item.id">
                     <button variant="ghost" class="" :to="link.item.id">
                         {{ link.item.title }}
