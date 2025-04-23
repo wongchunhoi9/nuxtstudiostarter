@@ -25,7 +25,7 @@ console.log('Documents:', data.value)
 
 <template>
   <div class="p-4">
-      <Input v-model="query" placeholder="Search..." class="p-4" />
+      <Input v-model="query" placeholder="Search..." class="p-4 border border-zinc-900" />
       <ul>
         <li v-for="link of result" :key="link.id" class="mt-2">
           <NuxtLink :to="link.id">{{ link.title }}</NuxtLink>

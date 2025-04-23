@@ -5,34 +5,42 @@ import MiniSearch from 'minisearch'
 // Reactive state for search query
 const searchQuery = ref('')
 
-// Fetch all content from the 'content' collection
-const { data: documents } = await useAsyncData('all-content', () =>
-  queryCollection('allContent').first()
-)
+// Fetch all content
+let documents = ref([])
+let fetchError = ref(null)
 
-// Debug: Log documents to verify content
+try {
+  const { data, error } = await useAsyncData('all-content', () => queryCollection('blog').first())
+  documents = data
+  fetchError = error
+} catch (err) {
+  fetchError.value = err.message
+}
+
+// Debug: Log documents and error
 console.log('Documents:', documents.value)
+console.log('Fetch Error:', fetchError.value)
 
 // Initialize MiniSearch
 const miniSearch = new MiniSearch({
   fields: ['title', 'content'], // Fields to index
-  storeFields: ['title', 'path'], // Fields to return in results
+  storeFields: ['title', '_path'], // Use _path for Nuxt Content
   searchOptions: {
     boost: { title: 2 }, // Prioritize title matches
-    fuzzy: 0.3, // Enable fuzzy search
+    fuzzy: 0.2, // Enable fuzzy search
     prefix: true // Allow prefix matching
   }
 })
 
-// Index documents
-if (documents.value) {
+// Index documents if available
+if (documents.value && documents.value.length) {
   const indexedDocs = documents.value.map(doc => ({
-    id: doc.path, // Unique ID
-    title: doc.title || 'Untitled',
-    content: doc.body?.toString() || '', // Convert body to string
-    path: doc.path
+    id: doc._path, // Use _path for Nuxt Content
+    title: doc.title || doc._path.split('/').pop() || 'Untitled', // Fallback title
+    content: typeof doc.body === 'string' ? doc.body : JSON.stringify(doc.body) || '', // Ensure string
+    _path: doc._path
   }))
-  console.log('Indexed Documents:', indexedDocs) // Debug: Log indexed documents
+  console.log('Indexed Documents:', indexedDocs)
   miniSearch.addAll(indexedDocs)
 }
 
@@ -40,20 +48,26 @@ if (documents.value) {
 const searchResults = computed(() => {
   if (!searchQuery.value.trim()) return []
   const results = miniSearch.search(searchQuery.value)
-  console.log('Search Results:', results) // Debug: Log search results
+  console.log('Search Query:', searchQuery.value)
+  console.log('Search Results:', results)
   return results.map(result => ({
     title: result.title,
-    path: result.path,
-    snippet: documents.value
-      ?.find(doc => doc.path === result.path)
-      ?.body?.toString()
-      ?.slice(0, 100) + '...' || ''
+    path: result._path, // Use _path for routing
+    snippet: (documents.value?.find(doc => doc._path === result._path)?.body?.toString() || '').slice(0, 100) + '...'
   }))
 })
 </script>
 
 <template>
   <div class="relative max-w-xl mx-auto">
+    <!-- Error or Loading State -->
+    <div v-if="fetchError" class="text-red-500 p-2">
+      Error fetching content: {{ fetchError }}
+    </div>
+    <div v-else-if="!documents" class="text-gray-600 p-2">
+      Loading content...
+    </div>
+
     <!-- Search Input -->
     <input
       v-model="searchQuery"
@@ -62,8 +76,11 @@ const searchResults = computed(() => {
       class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
 
-    <!-- Debug: Display if no results -->
-    <div v-if="searchQuery && !searchResults.length" class="absolute z-10 w-full mt-2 bg-white border rounded-lg shadow-lg p-4">
+    <!-- No Results Message -->
+    <div
+      v-if="searchQuery && !searchResults.length && documents"
+      class="absolute z-10 w-full mt-2 bg-white border rounded-lg shadow-lg p-4"
+    >
       <p class="text-gray-600">No results found for "{{ searchQuery }}"</p>
     </div>
 
