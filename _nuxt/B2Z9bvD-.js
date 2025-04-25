@@ -1,1 +1,0 @@
-import{l as s,f as r,k as n,S as o}from"./B4P_FT44.js";const t={};function l(e,a){return n(),r("ul",null,[o(e.$slots,"default")])}const _=Object.assign(s(t,[["render",l]]),{__name:"ProseUl"});export{_ as default};
