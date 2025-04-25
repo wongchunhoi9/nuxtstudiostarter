@@ -7,8 +7,7 @@
         <!-- <SearchBar /> -->
         
         
-        <!-- <SearchBarMinisearch /> -->
-            <SearchBarFuseJs />  
+     
         
 
         

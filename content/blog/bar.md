@@ -1,30 +1,8 @@
 ---
-title: blog post 1
 date: 2024-12-12
+category: [cat 1, installation, electronics]
+medium: 'xmedium xx'
 ---
+Hello  
+I am bar. Nice to meet you.
 
-# Here is an H1
-
-## Here is an H2
-
-### Here is H3
-
-**Bold.** And *italic*
-
-*Try d* different [] color to see if it is [possible]{.Color:red;} ?
-
-Hello :br-i am bar. Nice to meet 1try another [inline css]{class}
-
-you
-
-![IMG\_0279.jpeg](/img/testing/IMG_0279.jpeg)
-
-This is another line break
-
-## try another image upload from iOS
-
-![IMG\_0173.jpeg](/img/testing/IMG_0173.jpeg)
-
-And end of the blog here
-
-\#.

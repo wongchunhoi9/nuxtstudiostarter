@@ -13,7 +13,13 @@ export default defineContentConfig({
     }),
     blog: defineCollection({
       type: 'page',
-      source: 'blog/**',
+      // source: 'blog/**',
+      source: {
+        include: "blog/**",
+        // exclude: ["about/**",'**/.*'],
+        exclude: ["blog/.*"],
+        // prefix: '/',
+      },
       schema: z.object({
         date: z.date(),
         tags: z.array(z.string()),
@@ -22,7 +28,13 @@ export default defineContentConfig({
     }),
     work: defineCollection({
       type: 'page',
-      source: 'work/*.md',
+      // source: 'work/*.md',
+      source: {
+        include: "work/**",
+        // exclude: ["about/**",'**/.*'],
+        exclude: ["work/.*"],
+        // prefix: '/',
+      },
       schema: z.object({
         date: z.date(),
         tags: z.array(z.string()),
@@ -35,13 +47,16 @@ export default defineContentConfig({
       type:'page',
       source: {
         include: "**/*",
-        exclude: ["about/**"],
+        // exclude: ["about/**",'**/.*'],
+        exclude: ["about/**",'**/.*'],
         prefix: '/',
       },
       schema: z.object({
         date: z.date(),
         tags: z.array(z.string()),
         image: z.string(),
+        category: z.array(z.string()),
+        medium: z.string(),
       }),
     }),
   }

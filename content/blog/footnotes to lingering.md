@@ -7,6 +7,8 @@ tags:
   - asda
   - ""
 image: /img/blog/att.jsHp7UKQOzoZcjWTjUaYFBBzaAPo4CYquUA8OeBP160.jpg
+category: [cat 1, installation, electronics]
+medium: 'electronics'
 ---
 
 # Footnotes To Lingering page
