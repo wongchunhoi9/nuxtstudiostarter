@@ -4,6 +4,12 @@
 
 
         <NavigationMenu3 />
+        <!-- <SearchBar /> -->
+        
+        
+        <!-- <SearchBarMinisearch /> -->
+            <SearchBarFuseJs />  
+        
 
         
     </div>

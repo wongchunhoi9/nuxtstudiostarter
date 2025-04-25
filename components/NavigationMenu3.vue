@@ -16,7 +16,10 @@
             <NuxtLink to="/contact"><li><span class="p-2 hover:bg-relayorange hover:text-black rounded">contact</span> </li></NuxtLink>
           </ul>
         </div>
-  
+        
+        <!-- Search bar -->
+
+        <!-- <SearchBarFuseJs /> -->
         <!-- Header logo -->
         <div>
           <TheHeaderLogo  class="md:border-l-2 border-black h-max"/>
