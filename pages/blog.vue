@@ -1,4 +1,3 @@
 <template>
-    Temp contact page
     <NuxtPage />
 </template>
