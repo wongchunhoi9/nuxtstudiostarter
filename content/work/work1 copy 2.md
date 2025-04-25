@@ -1,5 +1,5 @@
 ---
-title: 'hardworking circuit #1.3 勤力電路＃1.3 '
+title: 'Work1 copy2 hardworking circuit #1.3 勤力電路＃1.3 '
 description: 'hardworking circuit#1 is a realization of a schema of monotonous, repetitive circuit, using as many units as possible of relay switch to bridge up the sequential extension of cables, merely for the purpose of electricity connection 勤力電路#1 實現了一個單調、重複的電路系統，以大量繼電器連接，順序延長成極長的電線，只不過就是為了通電。'
 date: 2016-12-11
 year: '2016'
@@ -22,7 +22,7 @@ medium: 'electronics'
 #懷疑人生就去 散步 | 中環PMQ（余詠茵Alice Yu）| When in doubt,Take a walk (4K Hong Kong Walking Tour)
 <iframe style="aspect-ratio: 16/9;" class="w-full " src="https://www.youtube.com/embed/5k83A6uVV0s?start=129" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-![alt text](../../public/img/testing/IMG_0224.jpeg)
+![alt text](/img/testing/IMG_0224.jpeg)
 
 
 ---
