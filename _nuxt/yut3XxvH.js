@@ -1,0 +1,1 @@
+import{l as s,f as t,k as o,S as r}from"./DPgv1OyX.js";const n={},a={class:"align-top text-lg border-2"};function c(e,l){return o(),t("td",a,[r(e.$slots,"default")])}const d=Object.assign(s(n,[["render",c]]),{__name:"ProseTd"});export{d as default};

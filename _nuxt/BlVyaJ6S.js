@@ -1,0 +1,1 @@
+import{l as s,f as t,k as o,S as r}from"./DPgv1OyX.js";const c={},n={class:"mb-2 mt-2 text-lg"};function a(e,_){return o(),t("p",n,[r(e.$slots,"default")])}const f=Object.assign(s(c,[["render",a]]),{__name:"ProseP"});export{f as default};

@@ -1,0 +1,1 @@
+import{l as s,f as t,k as r,S as o}from"./DPgv1OyX.js";const a={},n={class:"underline text-slate-900 hover:text-sky-700 hover:bg-relayorange"};function c(e,l){return r(),t("a",n,[o(e.$slots,"default")])}const f=Object.assign(s(a,[["render",c]]),{__name:"ProseA"});export{f as default};

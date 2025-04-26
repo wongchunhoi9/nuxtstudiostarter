@@ -1,1 +1,0 @@
-import{_ as o}from"./B9Bf-xkk.js";import{l as n,B as r,k as t,ah as a}from"./BlR_aFkJ.js";const c={};function _(s,m){const e=o;return t(),r(e,a(s.$attrs,{class:"p-2",loading:"lazy",fit:"cover",sizes:"xs:320px md:768px lg:1024px xl:1280px"}),null,16)}const x=Object.assign(n(c,[["render",_]]),{__name:"ProseImg"});export{x as default};
