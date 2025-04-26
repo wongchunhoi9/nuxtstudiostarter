@@ -3,7 +3,7 @@
     <main>
         <div class="md:flex flex-row-reverse ">
             <section class="md:max-w-lg md:p-4 p-2 md:border-l-2 md:border-black md:flex-shrink-0">
-                News
+                
                 <ContentRenderer v-if="news" :value="news" />
                 <div v-else>NEWS not found</div>
             </section>
@@ -13,7 +13,9 @@
                 <RecentBlog :displayPost="4" /> -->
                 <!-- <RecentPosts :displayPost="30" /> -->
                 <div>
-                    <h1>     
+                    <h1 class="text-3xl mx-2 py-2 ">
+                        <!-- <span class="text-slate-700">Recent</span> -->
+                        <!-- <span class="text-slate-700">Posts</span> -->
                     Recent Posts
                     </h1>
                         <div class="lg:columns-2 xl:columns-3 2xl:columns-4 gap-0 ">
