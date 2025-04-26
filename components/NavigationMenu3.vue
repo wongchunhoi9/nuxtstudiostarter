@@ -57,7 +57,7 @@
         <span @click="isOpen = false" class="flex w-full items-center p-4 border-b"></span>
 
         <!-- Search bar in drawer -->
-        <div class="w-full mt-4">
+        <div class="w-full mt-4 mb-4">
           <SearchBarFuseJs @link-clicked="closeDrawer" />
         </div>
         <ul class="divide-y font-sans">

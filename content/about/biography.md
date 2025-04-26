@@ -5,14 +5,15 @@ head: 'false'
 
 ## 王鎮海 Wong Chun Hoi
 
-(hoi9)  
-Artist  
+(hoi9)   
+Artist   
 artistic engineer @ [floating projects](https:///floatingprojectscollective.net)   
-sound designer/engineer
+1/2 @[Noisy Plaster](https://www.instagram.com/noisy_plaster/)  
+sound designer/engineer 
 
 
 
-## **Biography**
+## Biography
 
 畢業於城市大學創意媒體學院，主修批判性跨媒體實驗室。作品主要涉及聲音和電子零件。視坦白為創作原則，以悲憤作為創作源動力。總是希望透過創作思考如何展現科技媒界獨有的無用之用及其敘事方式。2018年獲第二十三屆ifva獨立短片及影像媒體比賽「媒體藝術」組金獎。
 

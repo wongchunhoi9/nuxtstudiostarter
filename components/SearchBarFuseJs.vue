@@ -7,11 +7,12 @@ const emit = defineEmits(['link-clicked'])
 
 const query = ref('')
 const { data } = await useAsyncData('search-data', () => queryCollectionSearchSections('allContent'))
-console.log('All Searchable data:', data.value)
+// console.log('All Searchable data:', data.value)
 
 const fuse = new Fuse(data.value, {
   keys: ['title', 'description']
 })
+// console.log('fuse data set:', fuse)
 
 const result = computed(() => fuse.search(toValue(query)).slice(0, 10))
 
@@ -39,6 +40,11 @@ const handleKeyDown = (event: KeyboardEvent) => {
     handleLinkClick(result.value[activeIndex.value].item.id)
   }
 }
+
+const clearQuery = () => {
+  query.value = '' // Clear the search query
+  activeIndex.value = -1 // Reset the active index
+}
 </script>
 
 <template>
@@ -50,6 +56,26 @@ const handleKeyDown = (event: KeyboardEvent) => {
         class="w-full text-base text-gray-900 placeholder:text-gray-400 focus:outline-none"
         @keydown="handleKeyDown"
       />
+      <button
+          v-if="query"
+          @click="clearQuery"
+          class="absolute right-2 text-gray-500 hover:text-black"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+      </button>
       <ul v-if="query && result.length" class="absolute z-10 bg-white border-2">
         <li
           v-for="(link, index) of result"

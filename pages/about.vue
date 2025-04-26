@@ -1,16 +1,26 @@
 <template>
 
-<div>
-    <h1>
+<div class="container mx-auto px-4 py-8">
+    <!-- <h1>
         ABOUT
-    </h1>   
-    <div>
-        <ContentRenderer
+    </h1>    -->
+    <div class="md:flex">
+        <div class="md shrink-0 mx-auto md:w-1/3 w-full">
+            <NuxtImg
+                src="/img/wongchunhoi9_profilepic.svg"
+                alt="Portrait of the author"
+                class="w-full "
+            />
+        </div>
+        <div>
+            <ContentRenderer
             v-if="biography"
             :value="biography"
             :head="false"
-        />
+            />
+        </div>
     </div>
+    <hr class="my-4 border-b-2">
     <div>
         <ContentRenderer
             v-if="cv"
@@ -18,6 +28,7 @@
             :head="false"
         />
     </div>
+    <hr class="my-4 border-b-2">
     <div>
         <ContentRenderer
             v-if="bibliography"
@@ -25,6 +36,7 @@
             :head="false"
         />
     </div>
+    <hr class="my-4 border-b-2">
     <div>
         <ContentRenderer
             v-if="sounddesign"

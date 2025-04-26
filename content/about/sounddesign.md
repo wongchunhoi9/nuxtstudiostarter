@@ -1,6 +1,7 @@
 ## Sound Design Credit / discography
-|       | Project | media     | credit    |
-| :---        |    :----   |          ---: |  ---:  |
+|    Year   | Project | media     | credit    |
+| :---        |    :----:   |          ---: |  ---:  |
+|2024 | Wind Goes on 《鳶緣如風》| Animation | Sound Design | 
 |2021 | The forgetter |  Game | Sound Design | 
 |2019 | Balance Breaker |  Animation / Game | Sound Design , music|
 |2018 | Ghost 《小鬼》 |  Animation | Sound design | 
