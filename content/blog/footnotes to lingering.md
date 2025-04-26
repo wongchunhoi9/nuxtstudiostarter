@@ -2,11 +2,8 @@
 title: title 筆記
 description: sdadasdasda sdadsad dad
 date: 2025-03-21
-tags:
-  - ABC
-  - asda
-  - ""
-image: /img/blog/att.jsHp7UKQOzoZcjWTjUaYFBBzaAPo4CYquUA8OeBP160.jpg
+tags:  [testing post]
+img: /img/blog/att.jsHp7UKQOzoZcjWTjUaYFBBzaAPo4CYquUA8OeBP160.jpg
 category: [cat 1, installation, electronics]
 medium: 'electronics'
 ---

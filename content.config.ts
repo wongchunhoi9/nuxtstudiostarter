@@ -8,7 +8,7 @@ export default defineContentConfig({
       schema: z.object({
         date: z.date(),
         tags: z.array(z.string()),
-        image: z.string(),
+        img: z.string(),
       })
     }),
     blog: defineCollection({
@@ -23,7 +23,7 @@ export default defineContentConfig({
       schema: z.object({
         date: z.date(),
         tags: z.array(z.string()),
-        image: z.string(),
+        img: z.string(),
       })
     }),
     work: defineCollection({
@@ -39,7 +39,7 @@ export default defineContentConfig({
         date: z.date(),
         tags: z.array(z.string()),
         category: z.array(z.string()),
-        image: z.string(),
+        img: z.string(),
         
       })
     }),
@@ -55,6 +55,7 @@ export default defineContentConfig({
         date: z.date(),
         tags: z.array(z.string()),
         image: z.string(),
+        img:z.string(),
         category: z.array(z.string()),
         medium: z.string(),
       }),

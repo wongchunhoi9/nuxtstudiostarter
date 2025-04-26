@@ -7,7 +7,7 @@
         <h2 class=" text-xl">{{ post.title }}</h2>
         <!-- <p>{{ post.description }}</p> -->
         <p>{{ formatDate(post.date) }}</p>
-         <NuxtImg :src="`${post.image}`" :alt="post.title" class=" w-full inset-0 bg-cover bg-center z-0" />
+         <NuxtImg :src="`${post.img}`" :alt="post.title" class=" w-full inset-0 bg-cover bg-center z-0" />
          <p v-for="(category, n) in post.category" :key="n" class="inline-block text-xs px-3 bg-gray-100 mr-2" > {{ category }}  </p>
       </NuxtLink>
     </div>

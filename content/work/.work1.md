@@ -6,7 +6,7 @@ year: '2016'
 draft: 'true'
 layout: work
 category: [hardworking-circuit-Series, installation, electronics]
-image: /img/blog/att.jsHp7UKQOzoZcjWTjUaYFBBzaAPo4CYquUA8OeBP160.jpg
+img: /img/blog/att.jsHp7UKQOzoZcjWTjUaYFBBzaAPo4CYquUA8OeBP160.jpg
 medium: 'electronics'
 ---
 
