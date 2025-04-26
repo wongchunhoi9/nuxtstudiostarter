@@ -94,11 +94,7 @@ MACBOOK PRO 的LCD MONITOR係用LG的   係LG的   係LG
 
 
 
-<figure >
-<img :src= "require('~/assets/images/blog/macbook-pro-mon-testrun.jpg')"
-     alt="" style="display:block;" />
-<figcaption style='color:#AAAAAA; float:right; width:100%'> </figcaption>     
-</figure>
+
 
 <br>
 

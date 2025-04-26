@@ -61,7 +61,7 @@ FM96.7， 據[維基百科](https://en.wikipedia.org/wiki/List_of_radio_stations
 
 參考：
 
-<a href="/work/Temporary-non-locatable-public-space-2-MumbaiCST">Temporary non-locatable public space#2 Mumbai CST 臨時無定空間＃2 － 印度 孟買 CST 火車站 </a>
+<a href="#">Temporary non-locatable public space#2 Mumbai CST 臨時無定空間＃2 － 印度 孟買 CST 火車站 </a>
 
 <a href="http://www.arttogether.org/boribunder.html" target='blank'>Art Tegether - 流動倉庫 @ [En]counters 2016 ─ 香港 x 孟買 藝術交流計劃 
 Bori Bunder @ [En]counters 2016 - Hong Kong X Mumbai Art Exchange Project </a>
