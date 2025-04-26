@@ -1,1 +1,0 @@
-import{l as e,f as r,k as s}from"./DPgv1OyX.js";const o={},c={class:"border-t-2 border-slade-500 my-4"};function t(n,a){return s(),r("hr",c)}const d=Object.assign(e(o,[["render",t]]),{__name:"ProseHr"});export{d as default};

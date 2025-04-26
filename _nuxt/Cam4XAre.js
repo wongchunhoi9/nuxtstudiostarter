@@ -1,0 +1,1 @@
+import{l as t,f as o,k as s,V as n}from"./7Uu8ARGh.js";const r={},c={class:"text-lg font-bold"};function a(e,l){return s(),o("strong",c,[n(e.$slots,"default")])}const f=Object.assign(t(r,[["render",a]]),{__name:"ProseStrong"});export{f as default};

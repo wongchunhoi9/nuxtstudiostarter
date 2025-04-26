@@ -1,1 +1,0 @@
-import{l as t,f as o,k as s,S as n}from"./DPgv1OyX.js";const r={},c={class:"text-lg font-bold"};function a(e,l){return s(),o("strong",c,[n(e.$slots,"default")])}const f=Object.assign(t(r,[["render",a]]),{__name:"ProseStrong"});export{f as default};

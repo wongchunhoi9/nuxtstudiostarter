@@ -1,1 +1,0 @@
-import{l as n,f as o,H as a,h as c,F as r,k as s,C as _}from"./DPgv1OyX.js";const m={};function p(f,e){const t=_;return s(),o(r,null,[e[0]||(e[0]=a(" Temp contact page ")),c(t)],64)}const u=n(m,[["render",p]]);export{u as default};

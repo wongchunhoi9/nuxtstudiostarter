@@ -1,0 +1,1 @@
+import{l as e,f as t,k as o,V as l}from"./7Uu8ARGh.js";const c={},n={class:"list-disc md:list-outside list-inside text-lg mb-4 mt-0"};function r(s,a){return o(),t("ul",n,[l(s.$slots,"default")])}const _=Object.assign(e(c,[["render",r]]),{__name:"ProseUl"});export{_ as default};
