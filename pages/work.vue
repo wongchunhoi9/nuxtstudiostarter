@@ -1,3 +1,3 @@
-<template>Temp music page
+<template>
         <NuxtPage />
 </template>
