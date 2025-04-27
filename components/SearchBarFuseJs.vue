@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { NuxtImg } from '#components'
 import Fuse from 'fuse.js'
 import { useRouter } from 'vue-router'
 
@@ -10,7 +11,7 @@ const { data } = await useAsyncData('search-data', () => queryCollectionSearchSe
 // console.log('All Searchable data:', data.value)
 
 const fuse = new Fuse(data.value, {
-  keys: ['title', 'description']
+  keys: ['title', 'description','img']
 })
 // console.log('fuse data set:', fuse)
 
@@ -89,6 +90,7 @@ const clearQuery = () => {
             @click="handleLinkClick(link.item.id)"
             class="w-full text-left p-2"
           >
+            
             {{ link.item.title }}
             <span class="text-gray-500 text-xs">
               {{ link.item.content?.slice(0, 100) }}...

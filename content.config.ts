@@ -32,7 +32,24 @@ export default defineContentConfig({
       source: {
         include: "work/**",
         // exclude: ["about/**",'**/.*'],
-        exclude: ["work/.*"],
+        exclude: ["work/.*","work/.draft/**","work/RealScreenShots/**"],
+        // prefix: '/',
+      },
+      schema: z.object({
+        date: z.date(),
+        tags: z.array(z.string()),
+        category: z.array(z.string()),
+        img: z.string(),
+        
+      })
+    }),
+    RealScreenShots: defineCollection({
+      type: 'page',
+      // source: 'work/*.md',
+      source: {
+        include: "work/RealScreenShots/**.md",
+        // exclude: ["about/**",'**/.*'],
+        // exclude: ["work/.*","work/.draft/**","work/RealScreenShots/**"],
         // prefix: '/',
       },
       schema: z.object({
@@ -69,8 +86,8 @@ export default defineContentConfig({
       source: {
         include: "**/*",
         // exclude: ["about/**",'**/.*'],
-        exclude: ["about/**",'**/.*'],
-        prefix: '/',
+        exclude: ["about/**",'**/.*','work/.*','work/.draft/**','work/RealScreenShots/**'],
+        // prefix: '/',
       },
       schema: z.object({
         date: z.date(),

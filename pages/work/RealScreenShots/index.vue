@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 const { data: allPosts } = await useAsyncData(route.path, () => {
-  return queryCollection('blog')
+  return queryCollection('RealScreenShots')
     .order('date', 'DESC')
     .all()
 })
@@ -82,7 +82,7 @@ const filterStatus = computed(() => {
 </script>
 <template>
     <h1 class="text-4xl  my-8">
-      Blog
+      Real Screen Shots
     </h1>
   <div class="flex flex-col md:flex-row">
     <!-- Drawer Toggle Button for Responsive View -->

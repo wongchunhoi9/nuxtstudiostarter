@@ -4,7 +4,7 @@
     <h1 class="text-4xl  my-8">
       Sound Design
     </h1>
-    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2  md:p-4 pb-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8  md:p-4 pb-8">
 
       <NuxtLink v-for="post in allPosts" :key="post.path" :to="post.path">
         <h2 class=" text-2xl">{{ post.title }}</h2>
