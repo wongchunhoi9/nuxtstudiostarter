@@ -74,9 +74,9 @@ Among the visitors who come to the HKVAC every day (in the past, at least before
 ### Exhibition View
 ![Alt text](/img/lostandfoundanythingstore/collection1/IMG_5463.jpeg)
 
-![Alt text](/img/lostandfoundanythingstore/collection1/closeup%20object%202.jpeg) 
+![Alt text](/img/lostandfoundanythingstore/collection1/closeup-object-2.jpeg) 
 
-![Alt text](/img/lostandfoundanythingstore/collection1/closeup%20object%204.jpeg)
+![Alt text](/img/lostandfoundanythingstore/collection1/closeup-object-4.jpeg)
 
 ![Alt text](/img/lostandfoundanythingstore/collection1/objecttdisplay.jpeg)
 
@@ -145,13 +145,13 @@ Web Development : Cyrus Chau ， [Console Technology  ](https://console.hk/)
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/535689745?h=998c17244f&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 <p><a href="https://vimeo.com/535689745">Lost and Found Anything Store - text drop trial 1 60fps 4k</a> from <a href="https://vimeo.com/user4910473">wongchunhoi9</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
-![Alt text](/img/lostandfoundanythingstore/collection1/_0000001-0500%201.gif)
+![Alt text](/img/lostandfoundanythingstore/collection1/_0000001-0500-1.gif)
 
 ![Alt text](/img/lostandfoundanythingstore/objects-on-floor.jpeg)
 
-![Alt text](/img/lostandfoundanythingstore/object%20drop.png)
+![Alt text](/img/lostandfoundanythingstore/object-drop.png)
 
-![Alt text](/img/lostandfoundanythingstore/all%20object%20group%20floor.png)
+![Alt text](/img/lostandfoundanythingstore/all-object-group-floor.png)
 
 
 ### 3D model viewer

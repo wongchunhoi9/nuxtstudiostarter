@@ -181,15 +181,15 @@ const filterStatus = computed(() => {
         :to="post.path"
         class="block mb-6"
       >
-        <h2 class="text-xl font-bold mb-2">{{ post.title }}</h2>
         <NuxtImg
-          loading="lazy"
-          :src="`${post.img}`"
-          :alt="post.title"
-          quality="50"
-          width="500"
-          class="w-full inset-0 bg-cover bg-center z-0 grayscale-75 mb-2"
+        loading="lazy"
+        :src="`${post.img}`"
+        :alt="post.title"
+        quality="50"
+        width="500"
+        class="w-full inset-0 bg-cover bg-center z-0 mb-2"
         />
+        <h2 class="text-xl font-bold mb-2">{{ post.title }}</h2>
         <p class="mb-2">{{ post.description }}</p>
         <div class="article-tag gap-2 flex flex-wrap mb-2">
           <div

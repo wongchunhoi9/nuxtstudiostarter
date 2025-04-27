@@ -1,1 +1,4 @@
-<template>Temp sound design page</template>
+<template>
+    
+    <NuxtPage />
+</template>

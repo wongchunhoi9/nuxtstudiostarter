@@ -183,7 +183,7 @@ The hardworking circuit series began in 2015 as experiments, published at Oil St
 ## Sketches
 ![Alt text](/img/hardworkingcircuit14/hwc14-part1-synnmotor-1.svg){width=1000}
 ![Alt text](/img/hardworkingcircuit14/hwc14-part1-synnmotor-2.svg){width=1000}
-![Alt text](/img/hardworkingcircuit14/part%202-01.svg){width=1000}
+![Alt text](/img/hardworkingcircuit14/part-2-01.svg){width=1000}
 ![Alt text](/img/hardworkingcircuit14/hardworking_circuit_1_4_case1.svg){width=1000}
 ![Alt text](/img/hardworkingcircuit14/hardworking_circuit_1_4_case2_motor.svg){width=1000}
 
