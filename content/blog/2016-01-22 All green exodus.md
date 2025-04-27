@@ -1,7 +1,6 @@
 ---
 title: All green exodus
-description: 'AGE set with arkajolie and wongchunhoi9 @ noise=noise, Multimedia Theatre, School of Creative Media, Hong Kong, 22 January 2016
-body percussion, clarinet, whining and egyptian flute sounds are ours, live tattooing was happening at the same time...'
+description: AGE set with arkajolie and wongchunhoi9 @ noise=noise, Multimedia Theatre, School of Creative Media, Hong Kong, 22 January 2016.   body percussion, clarinet, whining and egyptian flute sounds are ours, live tattooing was happening at the same time...
 date: 2016-01-22
 draft: 'true'
 layout: blog

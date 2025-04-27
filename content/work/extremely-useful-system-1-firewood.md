@@ -1,7 +1,6 @@
 ---
 title: 'extremely useful system #1 – firewood ｜終極有用系統 #1 – 柴火'
-description: 'Extremely useful system intended to make good use of electronics to achieve zero functionality and with least economic return.
-'
+description: 'Extremely useful system intended to make good use of electronics to achieve zero functionality and with least economic return.'
 date: 2016-10-12 00:42:23
 year: '2016'
 draft: 'true'

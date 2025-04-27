@@ -1,9 +1,6 @@
 ---
 title: 'Dream Machine 夢幻機器'
-description: 'Machine-based collage-installation, 2nd-order cybernetics
-An object sculpture of assemblage of old and new electronic/digital mediums
-機械拼貼裝置，二階控制論
-混合新舊電子/數字媒體成的機械雕塑'
+description: 'Machine-based collage-installation, 2nd-order cybernetics / An object sculpture of assemblage of old and new electronic/digital mediums / 機械拼貼裝置，二階控制論 / 混合新舊電子/數字媒體成的機械雕塑'
 date: 2018-10-12 00:42:23
 year: '2018'
 draft: 'true'
