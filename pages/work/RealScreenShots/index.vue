@@ -6,6 +6,10 @@ const { data: allPosts } = await useAsyncData(route.path, () => {
     .all()
 })
 
+// const specificPost  = await queryCollection('RealScreenShots').path(`/work/RealScreenShots/RealScreenShot-20201201`).first()
+
+// console.log('specificPost', specificPost)
+
 // Filters
 const selectedCategories = ref<string[]>([])
 const dateFilter = ref<{ from: string | null; to: string | null }>({

@@ -32,7 +32,7 @@ export default defineContentConfig({
       source: {
         include: "work/**",
         // exclude: ["about/**",'**/.*'],
-        exclude: ["work/.*","work/.draft/**","work/RealScreenShots/**"],
+        exclude: ["work/.*","work/.draft/**","work/realscreenshots/**"],
         // prefix: '/',
       },
       schema: z.object({
@@ -47,7 +47,7 @@ export default defineContentConfig({
       type: 'page',
       // source: 'work/*.md',
       source: {
-        include: "work/RealScreenShots/**.md",
+        include: "work/realscreenshots/**",
         // exclude: ["about/**",'**/.*'],
         // exclude: ["work/.*","work/.draft/**","work/RealScreenShots/**"],
         // prefix: '/',
