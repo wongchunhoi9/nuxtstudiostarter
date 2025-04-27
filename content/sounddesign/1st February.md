@@ -5,8 +5,8 @@ date: 2012-10-12 00:42:23
 year: '2012'
 draft: 'false'
 layout: work
-medium: 'An animation by FlyingPig'
-categories: [Animation]
+medium: 'Sound Design for animation'
+category: [Animation]
 img: 'img/1stfeb-thumbnail.jpg'
 featureInHome: 'yes'
 ---

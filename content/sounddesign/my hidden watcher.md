@@ -6,7 +6,7 @@ year: '2014'
 draft: 'false'
 layout: work
 medium: 'Animation sound'
-categories: [Animation]
+category: [Animation]
 img: 'img/thehiddenwatcher-thumbnail.jpg'
 featureInHome: 'yes'
 ---

@@ -6,7 +6,7 @@ year: '2018'
 draft: 'false'
 layout: work
 medium: 'Animation sound'
-categories: [Animation]
+category: [Animation]
 img: 'img/animation-ghost-thumbnail.jpeg'
 featureInHome: 'yes'
 ---

@@ -6,7 +6,7 @@ year: '2020 '
 draft: 'true'
 layout: work
 medium: 'Animation Sound Design'
-categories: [Animation]
+category: [Animation]
 img: 'img/cybermeow2048thumbnail.jpg'
 featureInHome: 'yes'
 ---

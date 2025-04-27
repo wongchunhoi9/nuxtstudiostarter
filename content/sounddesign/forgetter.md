@@ -6,7 +6,7 @@ year: '2021'
 draft: 'true'
 layout: work
 medium: 'Game sound'
-categories: [Game]
+category: [Game]
 img: 'img/forgetter.gif'
 featureInHome: 'yes'
 ---

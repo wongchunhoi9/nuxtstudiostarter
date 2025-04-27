@@ -57,6 +57,10 @@ export default defineContentConfig({
         tags: z.array(z.string()),
         category: z.array(z.string()),
         img: z.string(),
+        medium: z.string(),
+        year: z.string(),
+        description: z.string(),
+        credits: z.string(),
         
       })
     }),

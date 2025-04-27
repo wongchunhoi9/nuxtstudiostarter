@@ -5,7 +5,7 @@ date: 2016-10-12 00:42:23
 year: '2016 '
 draft: 'false'
 medium: 'Animation sound design'
-categories: [Animation]
+category: [Animation]
 img: 'img/dancing-eye-thumbnail.jpeg'
 featureInHome: 'yes'
 ---

@@ -5,8 +5,8 @@ date: 2013-10-12 00:42:23
 year: '2013'
 draft: 'false'
 layout: work
-medium: Video Installation 
-categories: [Installation]
+medium: Sound design for Video Installation 
+category: [Installation]
 img: 'img/inbertywetrust-thumbnail.jpg'
 featureInHome: 'yes'
 ---

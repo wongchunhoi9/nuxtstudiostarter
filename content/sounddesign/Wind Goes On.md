@@ -6,12 +6,12 @@ year: '2024'
 draft: 'false'
 layout: work
 medium: 'Animation Sound Design / Dubbing / Music'
-categories: [Animation]
+category: [Animation]
 img: 'img/windgoeson_thumbnail.jpg'
 featureInHome: 'yes'
 ---
 
-Animation by **[Morph Workshop](www.youtube.com/@morphworkshop)**  
+Animation by **[Morph Workshop](https://www.youtube.com/@morphworkshop)**  
 Sound Design (SFX, Music direction, Dubbing) by Wong Chun Hoi & Sarah Fang   
 ## Trailor
 

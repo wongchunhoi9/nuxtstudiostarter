@@ -5,7 +5,7 @@ date: 2019-10-12 00:42:23
 year: '2019 '
 draft: 'false'
 medium: 'Game & animation sound design'
-categories: [Game,Animation]
+category: [Game,Animation]
 img: 'img/balancebreakerscreenshot.gif'
 featureInHome: 'yes'
 ---

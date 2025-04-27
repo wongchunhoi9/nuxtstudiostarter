@@ -6,7 +6,7 @@ year: '2013'
 draft: 'false'
 layout: work
 medium: 'Animation sound'
-categories: [Animation]
+category: [Animation]
 img: 'img/yeti-thumbnail.jpg'
 featureInHome: 'yes'
 ---
