@@ -1,0 +1,1 @@
+import{_ as a,f as r,g as s,W as o}from"./BWQA3muu.js";const c={},l={class:"grid grid-cols-1 md:grid-cols-2 gap-1"};function n(e,t){return s(),r("div",l,[o(e.$slots,"default")])}const d=Object.assign(a(c,[["render",n]]),{__name:"ImageGalleryWrap2Column"});export{d as default};

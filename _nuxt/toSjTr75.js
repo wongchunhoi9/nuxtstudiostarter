@@ -1,0 +1,1 @@
+import{_ as s,f as t,g as o,W as r}from"./BWQA3muu.js";const n={},a={class:"align-top text-lg border-2"};function c(e,_){return o(),t("td",a,[r(e.$slots,"default")])}const l=Object.assign(s(n,[["render",c]]),{__name:"ProseTd"});export{l as default};

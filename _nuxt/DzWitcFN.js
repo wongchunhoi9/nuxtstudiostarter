@@ -1,1 +1,0 @@
-import{l as o,f as t,h as c,k as n,B as s}from"./7Uu8ARGh.js";const _={},a={class:"md:mx-auto max-w-6xl md:px-4 px-2 py-4"};function r(m,x){const e=s;return n(),t("div",a,[c(e)])}const d=o(_,[["render",r]]);export{d as default};

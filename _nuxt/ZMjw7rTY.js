@@ -1,0 +1,1 @@
+import{_ as s,f as t,g as r,W as o}from"./BWQA3muu.js";const a={},n={class:"underline text-slate-900 hover:text-sky-700 hover:bg-relayorange"};function c(e,_){return r(),t("a",n,[o(e.$slots,"default")])}const f=Object.assign(s(a,[["render",c]]),{__name:"ProseA"});export{f as default};
