@@ -57,6 +57,8 @@ export default defineContentConfig({
         tags: z.array(z.string()),
         category: z.array(z.string()),
         img: z.string(),
+        location: z.string(),
+        time: z.string(),
         
       })
     }),

@@ -84,88 +84,75 @@ const filterStatus = computed(() => {
   return totalFilters > 0 ? `(${totalFilters} active)` : ''
 })
 </script>
-<template>
-  <div class="mx-auto max-w-full">
 
-    <h1 class="text-4xl  my-4">
-      Real Screenshots
-    </h1>
-    <div class="flex flex-col md:flex-row">
-      <!-- Drawer Toggle Button for Responsive View -->
+<template>
+      <!-- Filter Section -->
+      <aside
+    :class="[
+      'fixed inset-y-0 left-0 bg-white z-50 p-4 transform transition-transform md:relative md:translate-x-0 md:w-1/4 border-b md:border-b-0 md:border-r border-gray-300',
+      isDrawerOpen ? 'translate-x-0' : '-translate-x-full'
+    ]"
+      class="w-2/3 md:w-1/4 md:sticky md:top-0 md:h-screen md:overflow-y-auto"
+      >
+      <!-- Close Drawer Button -->
       <button
-      class="md:hidden p-2 bg-gray-200 text-gray-700 rounded mb-4 "
+      class="md:hidden absolute top-4 right-4 p-2 text-gray-700 hover:text-black"
       @click="toggleDrawer"
       >
-      <span>
-        {{ isDrawerOpen ? 'Close Filters' : ' Filters' }}
-      </span>
-      <span v-if="selectedCategories.length || dateFilter.from || dateFilter.to" class="ml-2 text-sm text-gray-500">
-        (Applied: 
-        <span v-for="(tag, index) in selectedCategories" :key="tag">
-          {{ tag }}<span v-if="index < selectedCategories.length - 1">, </span>
-        </span>
-        <span v-if="dateFilter.from || dateFilter.to">
-          {{ dateFilter.from ? `From: ${dateFilter.from}` : '' }}
-          {{ dateFilter.to ? `To: ${dateFilter.to}` : '' }}
-        </span>)
-      </span>
-    </button>
-    
-  
-    
-    <!-- Blog Posts -->
-    <div class="w-full md:p-4 p-1 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 md:gap-2">
-      <NuxtLink
-      v-for="post in filteredPosts"
-      :key="post.path"
-      :to="post.path"
-      class="block md:mb-0"
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
       >
-      <NuxtImg
-      loading="lazy"
-      :src="`${post.img}`"
-      :alt="post.title"
-      quality="50"
-      width="500"
-      class="w-full inset-0 z-0 md:mb-2 h-36 md:h-48 object-cover"
-      />
-      <div class="hidden md:block ">
-        <h2 class="text-xl font-bold mb-2">{{ post.title }}</h2>
-        <div class="flex">
-          <p class="text-sm text-gray-500 pr-4">{{ formatDate(post.date) }}</p>
-          <p class="text-sm text-gray-500">{{post.time }}</p> 
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+  
+  <h3 class="font-bold mb-4">Filters</h3>
+  
+  <!-- Category Filter -->
+  <div class="flex gap-2 flex-wrap md:block">
+    <div
+    v-for="category in uniqueCategories"
+    :key="category"
+    class="whitespace-nowrap py-1"
+    >
+    <span
+    :class="[
+      'p-2 rounded cursor-pointer',
+      selectedCategories.includes(category)
+      ? 'bg-[#5bffa7] text-black font-bold shadow-xl '
+      : 'bg-gray-200 text-gray-700 hover:bg-relayorange'
+    ]"
+            @click="toggleCategory(category)"
+            >
+            {{ category }}
+          </span>
         </div>
-        <p class="text-sm text-gray-500">{{ post.location}}</p>
-        <!-- <p class="mb-2">{{ post.description }}</p> -->
-        <!-- <div class="article-tag gap-2 flex flex-wrap mb-2">
-          <div
-          v-for="(tag, n) in post.tags"
-          :key="n"
-          class="bg-gray-200 px-2 py-1 rounded"
-          >
-          {{ tag }}
-        </div>
-      </div> -->
-    </div>
-  </NuxtLink>
-</div>
-</div>
-</div>
+      </div>
+      
+      <!-- Date Filter -->
+      <div class="mt-4 sticky top-0 bg-white z-10">
+        <h4 class="font-semibold mb-2">Date</h4>
+        <label class="block mb-2">
+          From:
+          <input
+          type="date"
+          v-model="dateFilter.from"
+          class="border rounded p-1 w-full"
+          />
+        </label>
+        <label class="block">
+          To:
+          <input
+          type="date"
+          v-model="dateFilter.to"
+          class="border rounded p-1 w-full"
+          />
+        </label>
+      </div>
+    </aside>
 </template>
-
-<style scoped>
-/* Ensure tags stay in one row without breaking */
-.whitespace-nowrap {
-  white-space: nowrap;
-}
-
-/* Sticky date filter */
-.sticky {
-  position: sticky;
-}
-
-/* Prevent filter from covering navigation bar in desktop view */
-.md\:sticky {
-  top: 4rem; /* Adjust this value based on your navigation bar height */
-}
-</style>
