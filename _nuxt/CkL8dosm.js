@@ -1,0 +1,1 @@
+import{_ as r,f as s,g as o,W as a}from"./By5oUqDh.js";const t={},c={class:"w-full border-collapse border border-gray-300"};function l(e,n){return o(),s("table",c,[a(e.$slots,"default")])}const d=Object.assign(r(t,[["render",l]]),{__name:"ProseTable"});export{d as default};

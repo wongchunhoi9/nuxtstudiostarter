@@ -1,0 +1,1 @@
+import{_ as o,Q as n,f as s,g as a,j as c,i as l}from"./By5oUqDh.js";const r={},_={class:"text-md font-bold px-4 text-slate-400 text-right"};function i(e,p){const t=n("ContentSlot");return a(),s("div",null,[c("figcaption",_,[l(t,{use:e.$slots.default,unwrap:"p"},null,8,["use"])])])}const f=Object.assign(o(r,[["render",i]]),{__name:"ImageCaption"});export{f as default};

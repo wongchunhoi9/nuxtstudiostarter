@@ -1,1 +1,0 @@
-import{_ as s,f as a,g as t,W as c}from"./BWQA3muu.js";const n={},o={class:"md:flex md:flex-wrap"};function r(e,l){return t(),a("div",o,[c(e.$slots,"default")])}const f=Object.assign(s(n,[["render",r]]),{__name:"Fleximage"});export{f as default};
