@@ -1,1 +1,0 @@
-import{_ as e,f as r,g as s}from"./B-knSOA7.js";const o={},c={class:"border-t-2 border-slade-500 my-4"};function t(n,_){return s(),r("hr",c)}const d=Object.assign(e(o,[["render",t]]),{__name:"ProseHr"});export{d as default};

@@ -1,0 +1,1 @@
+import{_ as o,K as a,g as n,aj as t,L as c}from"./DQLN_x8S.js";const r={};function m(s,_){const e=c;return n(),a(e,t(s.$attrs,{class:"md:mx-auto md:max-h-[90vh]",loading:"lazy",fit:"cover",sizes:" sm:480px md:768px lg:1024px xl:1280px"}),null,16)}const x=Object.assign(o(r,[["render",m]]),{__name:"ProseImg"});export{x as default};

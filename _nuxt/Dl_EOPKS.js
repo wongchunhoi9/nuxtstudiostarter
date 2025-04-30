@@ -1,0 +1,1 @@
+import{_ as a,f as l,g as s,W as t}from"./DQLN_x8S.js";const n={},o={class:"max-h-full h-auto max-w-full"};function r(e,c){return s(),l("div",o,[t(e.$slots,"default")])}const f=Object.assign(a(n,[["render",r]]),{__name:"ImageGallerySingle"});export{f as default};
