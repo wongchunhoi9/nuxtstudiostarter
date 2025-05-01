@@ -125,6 +125,7 @@ const filterStatus = computed(() => {
       loading="lazy"
       :src="`${post.img}`"
       :alt="post.title"
+      :modifiers="{ rotate: null }" 
       quality="50"
       width="500"
       class="w-full inset-0 z-0 md:mb-2 h-36 md:h-48 object-cover"

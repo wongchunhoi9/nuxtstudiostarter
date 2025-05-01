@@ -23,7 +23,9 @@ export default defineNuxtConfig({
   },
   image: {
     quality: 80 ,
-    rotate: null,
+    modifiers :{ 
+      rotate: null,
+    },
     screens: {
       xs: 320,
       sm: 640,

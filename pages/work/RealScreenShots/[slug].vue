@@ -20,7 +20,13 @@ const { data: surroundings } = await useAsyncData(`realscreenshots-surroundings-
     <!-- Render the blog post as Prose & Vue components -->
     <ContentRenderer :value="post" />
   </div>
-
+  <div class="mt-8">
+    <NuxtLink 
+      to="/work/realscreenshots"
+      class="text-blue-500 hover:underline"
+      > back
+    </NuxtLink>
+    </div>
     <!-- Surrounding Blog Posts -->
     <div class="mt-8 flex justify-between">
     <!-- Previous Post -->

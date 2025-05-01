@@ -38,6 +38,7 @@
                                         loading="lazy"
                                         :src="`${post.img}`" 
                                         :alt="post.title"
+                                        :modifiers="{ rotate: null }" 
                                         quality="50"
                                         width="500"
                                         class=" w-full  inset-0 bg-cover bg-center z-0 grayscale-75" />
