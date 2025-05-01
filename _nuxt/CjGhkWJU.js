@@ -1,1 +1,0 @@
-import{_ as o,f as t,i as c,g as n,A as _}from"./DQLN_x8S.js";const s={},a={class:"md:mx-auto max-w-6xl md:px-4 px-2 py-4"};function r(m,x){const e=_;return n(),t("div",a,[c(e)])}const d=o(s,[["render",r]]);export{d as default};

@@ -1,1 +1,0 @@
-import{_ as t,f as o,g as s,W as n}from"./DQLN_x8S.js";const r={},c={class:"text-lg font-bold"};function a(e,_){return s(),o("strong",c,[n(e.$slots,"default")])}const f=Object.assign(t(r,[["render",a]]),{__name:"ProseStrong"});export{f as default};

@@ -1,1 +1,0 @@
-import{_ as a,f as s,g as n,W as l}from"./DQLN_x8S.js";const o={},t={class:"h-auto max-w-full md:col-span-2 xl:col-span-3"};function c(e,r){return n(),s("div",t,[l(e.$slots,"default")])}const f=Object.assign(a(o,[["render",c]]),{__name:"ImageGallerySpan2"});export{f as default};

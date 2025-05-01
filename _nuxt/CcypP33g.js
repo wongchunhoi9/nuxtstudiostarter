@@ -1,1 +1,0 @@
-import{_ as e,f as t,g as o,W as c}from"./DQLN_x8S.js";const l={},n={class:"list-disc md:list-outside list-inside text-lg mb-4 mt-0"};function r(s,a){return o(),t("ul",n,[c(s.$slots,"default")])}const _=Object.assign(e(l,[["render",r]]),{__name:"ProseUl"});export{_ as default};
