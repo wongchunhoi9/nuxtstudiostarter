@@ -88,7 +88,7 @@ export default defineContentConfig({
       source: {
         include: "**/*",
         // exclude: ["about/**",'**/.*'],
-        exclude: ["about/**",'**/.*','work/.*','work/.draft/**','work/RealScreenShots/**'],
+        exclude: ["about/**",'**/.*','work/.*','work/.draft/**','work/realscreenshots/**'],
         // prefix: '/',
       },
       schema: z.object({
