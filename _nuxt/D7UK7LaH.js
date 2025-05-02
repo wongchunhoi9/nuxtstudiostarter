@@ -1,1 +1,0 @@
-import{_ as n,f as o,G as s,i as a,F as c,g as r,A as _}from"./D4IRS7xy.js";const m={};function p(u,e){const t=_;return r(),o(c,null,[e[0]||(e[0]=s("Temp music page ")),a(t)],64)}const i=n(m,[["render",p]]);export{i as default};
