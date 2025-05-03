@@ -1,1 +1,0 @@
-import{_ as r}from"./DlAUqK2U.js";import{e as s,f as t,Z as o}from"./Dwc3w0Lz.js";const a={},n={class:"underline text-slate-900 hover:text-sky-700 hover:bg-relayorange"};function c(e,_){return t(),s("a",n,[o(e.$slots,"default")])}const d=Object.assign(r(a,[["render",c]]),{__name:"ProseA"});export{d as default};

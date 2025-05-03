@@ -1,1 +1,0 @@
-import{e as o,h as t,f as c,A as n}from"./Dwc3w0Lz.js";import{_}from"./DlAUqK2U.js";const r={},s={class:"container md:mx-auto md:px-4 px-2 py-4"};function a(m,p){const e=n;return c(),o("div",s,[t(e)])}const x=_(r,[["render",a]]);export{x as default};
