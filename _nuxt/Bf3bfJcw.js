@@ -1,1 +1,0 @@
-import{e as o,z as n,h as r,F as s,f as a,A as c}from"./LtuKeQTn.js";import{_}from"./DlAUqK2U.js";const m={};function p(f,e){const t=c;return a(),o(s,null,[e[0]||(e[0]=n("Temp music page ")),r(t)],64)}const l=_(m,[["render",p]]);export{l as default};
