@@ -1,6 +1,17 @@
 # Nuxt Content Starter
 
+Persoanl website development repo for --> [wongchunhoi9.com](wongchunhoi9.com)
+
 Look at the [Nuxt Content documentation](https://content.nuxt.com) to learn more.
+
+<!-- - Nuxt 3 -->
+- Tailwind CSS
+- Nuxt Content 
+- Nuxt Image
+- Nuxt Studio as the CMS
+
+
+# Development Note
 
 ## Setup
 
