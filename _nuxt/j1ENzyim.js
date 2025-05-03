@@ -1,1 +1,0 @@
-import{_ as s,f as o,g as r,W as t}from"./C03sV5na.js";const a={},c={class:"md:grid md:grid-cols-2"};function n(e,_){return r(),o("div",c,[t(e.$slots,"default")])}const l=Object.assign(s(a,[["render",n]]),{__name:"Samerow"});export{l as default};

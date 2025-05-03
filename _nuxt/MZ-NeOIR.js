@@ -1,1 +1,0 @@
-import{_ as s,f as o,g as t,W as c}from"./C03sV5na.js";const n={},r={class:"font-semibold italic"};function a(e,_){return t(),o("em",r,[c(e.$slots,"default")])}const f=Object.assign(s(n,[["render",a]]),{__name:"ProseEm"});export{f as default};
