@@ -10,14 +10,14 @@ updated: '2022-12-31'
 
 ## EDUCATION
 
-2009 -2012 
+### 2009 -2012 
 - Bachelor of Arts (Hons) in Creative Media, Major in Critical Intermedia Laboratory,School of Creative Media, City University of Hong Kong
 
 ---
 
 ## AWARD
 
-2018
+### 2018
 - [Gold Award, Media Art Catagory , 23rd IFVA award](http://www.ifva.com/page/?id=3hdMvT6RzUc#award-list%7C23%7C5), Hong Kong Arts Centre, Hong Kong
 
 ---

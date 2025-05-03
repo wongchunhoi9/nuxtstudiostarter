@@ -46,16 +46,16 @@ useHead({
 </script>
 
 <template>
-  <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+  <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
     <!-- Left Column -->
     <div class="block">
-      <NuxtLink to="/blog" class="text-blue-500 hover:underline">
+      <NuxtLink to="/blog" class=" text-slate-700 hover:underline">
         ← All Blog Posts
       </NuxtLink>
     </div>
 
     <!-- Blog Content -->
-    <div class="col-span-1 lg:col-span-3 mx-auto">
+    <div class="col-span-1 lg:col-span-4 mx-auto">
       <p>{{ formatDate(post.date) }}</p>
       <h1 class="text-3xl font-bold mb-4 ">{{ post.title }}</h1>
       <ContentRenderer :value="post" />
@@ -67,12 +67,12 @@ useHead({
 
 
     <!-- Surrounding Blog Posts -->
-    <div class="flex justify-between w-full lg:w-auto">
+    <div class="flex justify-between w-full lg:w-full md:py-4">
       <!-- Previous Post -->
       <NuxtLink
         v-if="surroundings?.[0]"
         :to="surroundings[0].path"
-        class="text-blue-500 hover:underline mr-4"
+        class="text-slate-700 hover:underline mr-4"
       >
         ← {{ surroundings[0].title }}
       </NuxtLink>
@@ -81,7 +81,7 @@ useHead({
       <NuxtLink
         v-if="surroundings?.[1]"
         :to="surroundings[1].path"
-        class="text-blue-500 hover:underline"
+        class="text-slate-700 hover:underline"
       >
         {{ surroundings[1].title }} →
       </NuxtLink>

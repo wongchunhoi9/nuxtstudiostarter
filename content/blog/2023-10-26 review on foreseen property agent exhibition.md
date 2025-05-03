@@ -8,7 +8,7 @@ draft: 'false'
 featureInHome: 'yes'
 ---
 
-![Alt text](/img/blog/foreseen_property_review/foreseen_exhibition_flyingpigWork.jpg)
+![Alt text](/img/blog/foreseen_property_review/foreseen_exhibition_flyingpigWork.jpg)  
 ## 我來補完一下多年前的「這件事」
 
 ![寓延地產代理 銷售手冊 第25貢 節錄](/img/blog/foreseen_property_review/foreseenhandbookPage25excerpt.jpg)
