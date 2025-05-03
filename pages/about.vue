@@ -1,5 +1,12 @@
 <template>
-
+  <Head>
+    <Title> About - wongchunhoi9 </Title>
+    <Meta name="About wong chun hoi - (hoi9)
+    Artist
+    artistic engineer @ floating projects
+    1/2 @Noisy Plaster
+    sound designer/engineer"  />
+  </Head>
 <div class="container mx-auto px-4 py-8">
     <div class="md:flex">
         <div class="md shrink-0 mx-auto md:w-1/3 w-full">

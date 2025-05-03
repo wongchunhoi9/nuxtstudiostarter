@@ -17,13 +17,13 @@
       <!-- Navbar -->
       <div class="hidden md:block md:order-1 order-3">
         <ul class="flex space-x-2 font-sans">
-          <NuxtLink to="/"><li><span class="p-2 hover:bg-relayorange hover:text-black rounded">home</span></li></NuxtLink>
-          <NuxtLink to="/work"><li><span class="p-2 hover:bg-relayorange hover:text-black rounded">work</span></li></NuxtLink>
-          <NuxtLink to="/music"><li><span class="p-2 hover:bg-relayorange hover:text-black rounded">music</span></li></NuxtLink>
-          <NuxtLink to="/sounddesign"><li><span class="p-2 hover:bg-relayorange hover:text-black rounded">sound design</span></li></NuxtLink>
-          <NuxtLink to="/blog"><li><span class="p-2 hover:bg-relayorange hover:text-black rounded">blog</span></li></NuxtLink>
-          <NuxtLink to="/about"><li><span class="p-2 hover:bg-relayorange hover:text-black rounded">about</span></li></NuxtLink>
-          <NuxtLink to="/contact"><li><span class="p-2 hover:bg-relayorange hover:text-black rounded">contact</span></li></NuxtLink>
+          <NuxtLink to="/"><li><span class="p-2 hover:bg-relayorangelight hover:text-black rounded">home</span></li></NuxtLink>
+          <NuxtLink to="/work"><li><span class="p-2 hover:bg-relayorangelight hover:text-black rounded">work</span></li></NuxtLink>
+          <NuxtLink to="/music"><li><span class="p-2 hover:bg-relayorangelight hover:text-black rounded">music</span></li></NuxtLink>
+          <NuxtLink to="/sounddesign"><li><span class="p-2 hover:bg-relayorangelight hover:text-black rounded">sound design</span></li></NuxtLink>
+          <NuxtLink to="/blog"><li><span class="p-2 hover:bg-relayorangelight hover:text-black rounded">blog</span></li></NuxtLink>
+          <NuxtLink to="/about"><li><span class="p-2 hover:bg-relayorangelight hover:text-black rounded">about</span></li></NuxtLink>
+          <NuxtLink to="/contact"><li><span class="p-2 hover:bg-relayorangelight hover:text-black rounded">contact</span></li></NuxtLink>
         </ul>
       </div>
 
@@ -76,7 +76,7 @@
 
 <style scoped>
 .router-link-active {
-  @apply font-bold text-black rounded p-4 md:p-0 shadow-emerald-400 shadow-xl bg-[#5bffa7] animate-bounce-slow;
+  @apply font-bold text-black rounded p-4 md:p-0 shadow-emerald-400 shadow-xl bg-greenled animate-bounce-slow;
 }
 </style>
 

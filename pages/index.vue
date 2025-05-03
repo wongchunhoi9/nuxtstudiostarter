@@ -13,7 +13,7 @@
                 <RecentBlog :displayPost="4" /> -->
                 <!-- <RecentPosts :displayPost="30" /> -->
                 <div>
-                    <h1 class="text-3xl mx-2 py-2 ">
+                    <h1 class="text-3xl mx-2 py-2 font-black ">
                         <!-- <span class="text-slate-700">Recent</span> -->
                         <!-- <span class="text-slate-700">Posts</span> -->
                     Recent Posts

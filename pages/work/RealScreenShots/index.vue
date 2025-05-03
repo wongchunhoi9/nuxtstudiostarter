@@ -87,8 +87,8 @@ const filterStatus = computed(() => {
 <template>
   <div class="mx-auto max-w-full">
 
-    <h1 class="text-4xl  my-4">
-      Real Screenshots
+    <h1 class="px-4 text-4xl  my-4 font-bold">
+      Real Screenshots 螢幕快照
     </h1>
     <div class="flex flex-col md:flex-row">
       <!-- Drawer Toggle Button for Responsive View -->

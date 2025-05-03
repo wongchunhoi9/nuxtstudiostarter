@@ -81,27 +81,27 @@ const filterStatus = computed(() => {
 })
 </script>
 <template>
-    <h1 class="text-4xl  mb-8 ">
+    <h1 class="text-4xl  mb-8 font-black ">
       Blog
     </h1>
   <div class="flex flex-col md:flex-row">
     <!-- Drawer Toggle Button for Responsive View -->
     <button
-      class="md:hidden p-2 bg-gray-200 text-gray-700 rounded mb-4 "
+      class="md:hidden p-2 bg-gray-100 text-gray-700 rounded mb-4 "
       @click="toggleDrawer"
     >
       <span>
         {{ isDrawerOpen ? 'Close Filters' : ' Filters' }}
       </span>
       <span v-if="selectedCategories.length || dateFilter.from || dateFilter.to" class="ml-2 text-sm text-gray-500">
-        (Applied: 
+        : 
         <span v-for="(tag, index) in selectedCategories" :key="tag">
           {{ tag }}<span v-if="index < selectedCategories.length - 1">, </span>
         </span>
         <span v-if="dateFilter.from || dateFilter.to">
           {{ dateFilter.from ? `From: ${dateFilter.from}` : '' }}
           {{ dateFilter.to ? `To: ${dateFilter.to}` : '' }}
-        </span>)
+        </span>
       </span>
     </button>
 
@@ -143,8 +143,8 @@ const filterStatus = computed(() => {
             :class="[
               'p-2 rounded cursor-pointer',
               selectedCategories.includes(category)
-                ? 'bg-[#5bffa7] text-black font-bold shadow-xl '
-                : 'bg-gray-200 text-gray-700 hover:bg-relayorange'
+                ? 'bg-greenled text-black font-bold shadow-xl '
+                : 'text-sm bg-gray-50 text-gray-700 hover:bg-relayorangelight'
             ]"
             @click="toggleCategory(category)"
           >
@@ -197,7 +197,7 @@ const filterStatus = computed(() => {
           <div
             v-for="(tag, n) in post.tags"
             :key="n"
-            class="bg-gray-200 px-2 py-1 rounded"
+            class="bg-gray-50 text-sm px-2 py-1 rounded"
           >
             {{ tag }}
           </div>

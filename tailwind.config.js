@@ -5,8 +5,9 @@ export default {
     extend: {
       colors:{
         'rice': '##DFDED9',
-        'relayorange':'#ffd41511',
-        'greenled':'#5bffa7'
+        'relayorange':'#ffd415',
+        'relayorangelight':'#ffd41511',
+        'greenled':'#5bffa755'
       },
       aspectRatio: {
         '4/3': '4 / 3',

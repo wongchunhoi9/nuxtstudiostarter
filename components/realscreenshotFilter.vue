@@ -124,7 +124,7 @@ const filterStatus = computed(() => {
     :class="[
       'p-2 rounded cursor-pointer',
       selectedCategories.includes(category)
-      ? 'bg-[#5bffa7] text-black font-bold shadow-xl '
+      ? 'bg-greenled text-black font-bold shadow-xl '
       : 'bg-gray-200 text-gray-700 hover:bg-relayorange'
     ]"
             @click="toggleCategory(category)"

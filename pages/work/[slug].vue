@@ -26,6 +26,10 @@ useHead({
 
 <template>
   <div class="container max-w-6xl mx-auto md:px-4">
+    <h1 class="text-4xl font-extrabold my-7">{{ post.title }}</h1>
+    <p class="text-end">{{ post.medium }}</p>
+    <p class="text-end">{{ post.year }}</p>
+
     <!-- Render the blog post as Prose & Vue components -->
     <ContentRenderer :value="post" />
   </div>

@@ -1,5 +1,5 @@
 <template>
-<div class="container md:mx-auto  md:px-4 px-2 py-4">
+<div class="">
     <NuxtPage />
 </div>
 

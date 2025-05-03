@@ -4,27 +4,54 @@
     <Meta name="Work made by wong chun hoi"  />
   </Head>
   <div class="container mx-auto md:px-4 px-2">
-    <h1 class="text-4xl  my-8">
+
+   <!-- Heading -->
+    <h1 class="text-4xl  my-8 font-black">
       Sound Design
     </h1>
-    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8  md:p-4 pb-8">
 
-      <NuxtLink v-for="post in allPosts" :key="post.path" :to="post.path">
-        <h2 class=" text-2xl">{{ post.title }}</h2>
-        <!-- <p>{{ post.description }}</p> -->
-        <p>{{ formatDate(post.date) }}</p>
-        <span class=" text-slate-700 md:px-4 text-xl">
-            {{ post.medium }}
-        </span>
-         <NuxtImg :src="`${post.img}`" :alt="post.title" class=" w-full inset-0 bg-cover bg-center z-0" />
+    <!-- List of post -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 md:p-4 pb-8">
+      <NuxtLink
+        v-for="post in allPosts"
+        :key="post.path"
+        :to="post.path"
+        class="relative group"
+      >
+      <h2 class="text-2xl">{{ post.title }}</h2>
+      <p>{{ formatDate(post.date) }}</p>
+      <span class="text-slate-700 md:px-4 text-xl">
+        {{ post.medium }}
+      </span>
+      
+        <!-- Post Image -->
+        <NuxtImg
+          :src="`${post.img}`"
+          :alt="post.title"
+          class="w-full inset-0 bg-cover bg-center z-0"
+        />
 
-          <div class="post-discription md:p-2 md:block hidden text-sm ">
-              {{ post.description }}
+        <!-- Overlay -->
+        <div
+          class="absolute inset-0 bg-relayorangelight opacity-0 group-hover:opacity-70 transition-opacity duration-300"
+        ></div>
+
+        <!-- Post Content -->
+        <div class="relative z-10 p-4">
+          <div class="post-description md:p-2 md:block hidden text-sm">
+            {{ post.description }}
           </div>
           <div class="tag-list px-1">
-              <div v-for="(category, n) in post.category" :key="n" class="tag inline-block bg-gray-200 rounded px-3 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2" >{{ category }}</div>
+            <div
+              v-for="(category, n) in post.categories"
+              :key="n"
+              class="tag inline-block bg-gray-200 rounded px-3 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2"
+            >
+              {{ category }}
+            </div>
           </div>
-        </NuxtLink>
+        </div>
+      </NuxtLink>
     </div>
   </div>
   </template>
