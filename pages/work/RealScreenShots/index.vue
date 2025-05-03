@@ -5,10 +5,11 @@ const { data: allPosts } = await useAsyncData(route.path, () => {
     .order('date', 'DESC')
     .all()
 })
+const showcase1  = await queryCollection('RealScreenShots').path(`/work/realscreenshots/showcase1`).first()
 
 // debug use
-// const specificPost  = await queryCollection('RealScreenShots').path(`/work/RealScreenShots/RealScreenShot-20201201`).first()
-//console.log('specificPost', specificPost)
+// const specificPost  = await queryCollection('RealScreenShots').path(`/work/realscreenshots/showcase1`).first()
+// console.log('specificPost', specificPost)
 
 // Filters
 const selectedCategories = ref<string[]>([])
@@ -90,6 +91,10 @@ const filterStatus = computed(() => {
     <h1 class="px-4 text-4xl  my-4 font-bold">
       Real Screenshots 螢幕快照
     </h1>
+    
+    <!-- display showcase #1 @ pointsman -->
+    <ContentRenderer :value="showcase1" />
+
     <div class="flex flex-col md:flex-row">
       <!-- Drawer Toggle Button for Responsive View -->
       <button

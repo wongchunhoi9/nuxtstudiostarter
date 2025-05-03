@@ -89,12 +89,12 @@
         <h2 class="text-xl font-semibold mb-4 text-gray-500">Filters</h2>
         <div class="mb-4">
           <h3 class="text-md text-gray-500 ">Categories</h3>
-          <ul>
+          <ul class="flex flex-wrap md:block gap-4">
             <!-- "ALL" Button -->
             <li
-              class="cursor-pointer hover:bg-orangerelaylight inline-block mr-2 px-3"
+              class="cursor-pointer hover:bg-orangerelay bg-gray-200 inline-block mr-2 px-3"
               :class="{
-                'text-sm  bg-greenled mr-2': selectedCategory === null,
+                'text-sm bg-greenled mr-2': selectedCategory === null,
                 'text-sm text-gray-500': selectedCategory !== null
               }"
               @click="resetFilters"
@@ -105,7 +105,7 @@
             <li
               v-for="(category, index) in uniqueCategories"
               :key="index"
-              class="inline-block text-sm px-3 bg-gray-100 mr-2"
+              class="cursor-pointer text-sm px-3 mr-2"
               :class="{
                 'bg-greenled font-semibold': selectedCategory === category,
                 'text-gray-400': selectedCategory !== category
@@ -126,7 +126,7 @@
           :to="post.path"
           class="relative group"
         >
-          <h2 class="text-2xl font-semibold">{{ post.title }}</h2>
+          <h2 class="text-3xl font-semibold">{{ post.title }}</h2>
           <div class="text-left">
             <p>{{ formatDate(post.date) }}</p>
           </div>

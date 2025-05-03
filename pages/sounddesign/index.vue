@@ -20,7 +20,7 @@
       >
       <h2 class="text-2xl font-medium">{{ post.title }}</h2>
       <p class="pr-4 text-end">{{ formatDate(post.date) }}</p>
-      <p class="text-slate-700 md:px-4 md:text-end text-xl">
+      <p class=" text-gray-800 md:px-4 md:text-end text-xl">
         {{ post.medium }}
       </p>
       

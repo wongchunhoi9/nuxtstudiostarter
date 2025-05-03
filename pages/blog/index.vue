@@ -130,7 +130,7 @@ const filterStatus = computed(() => {
         </svg>
       </button>
 
-      <h3 class="font-bold mb-4">Filters</h3>
+      <h3 class="font-bold text-gray-500 mb-4">Filters</h3>
 
       <!-- Category Filter -->
       <div class="flex gap-2 flex-wrap md:block">
@@ -144,7 +144,7 @@ const filterStatus = computed(() => {
               'p-2 rounded cursor-pointer',
               selectedCategories.includes(category)
                 ? 'bg-greenled text-black font-bold shadow-xl '
-                : 'text-sm bg-gray-50 text-gray-700 hover:bg-relayorangelight'
+                : 'text-sm bg-gray-50 text-gray-500 hover:bg-relayorangelight'
             ]"
             @click="toggleCategory(category)"
           >
