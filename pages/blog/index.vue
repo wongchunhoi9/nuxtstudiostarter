@@ -81,7 +81,7 @@ const filterStatus = computed(() => {
 })
 </script>
 <template>
-    <h1 class="text-4xl  my-8">
+    <h1 class="text-4xl  mb-8 ">
       Blog
     </h1>
   <div class="flex flex-col md:flex-row">

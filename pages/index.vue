@@ -38,6 +38,7 @@
                                         loading="lazy"
                                         :src="`${post.img}`" 
                                         :alt="post.title"
+                                        :modifiers="{ rotate: null }" 
                                         quality="50"
                                         width="500"
                                         class=" w-full  inset-0 bg-cover bg-center z-0 grayscale-75" />
@@ -51,14 +52,14 @@
         </div>
     </main>
 
-    <div>
+    <!-- <div>
         Testing nuxt Image 
         with modifieris rotate null
         <NuxtImg src="img/testing/IMG_7676.JPG" class="w-full" :modifiers="{ rotate: null }"/>
-        <!-- <NuxtImg src="img/testing/IMG_7676.JPG" class="w-full" sizes="xs:200px md:500px lg:1024px"/> -->
+        <NuxtImg src="img/testing/IMG_7676.JPG" class="w-full" sizes="xs:200px md:500px lg:1024px"/>
         <NuxtImg src="img/testing/IMG_7676.JPG" class="w-full" preset="preview"/>
         
-    </div>
+    </div> -->
 </template>
 
 
@@ -70,7 +71,7 @@ const { data: allPosts } = await useAsyncData(route.path, () => {
   return queryCollection('allContent')
     .where('date','IS NOT NULL')
     .order('date', 'DESC')
-    .limit(30)  //Show the recent post number
+    .limit(50)  //Show the recent post number
     .all()
 })
 

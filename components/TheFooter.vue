@@ -102,7 +102,7 @@
     }
 
     .socialmedia { 
-        @apply hover:bg-yellow-300 hover:text-gray-900 
+        @apply hover:bg-relayorange hover:text-gray-900 
     }
 
 </style>

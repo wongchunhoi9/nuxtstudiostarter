@@ -1,5 +1,8 @@
 <template>
-
+  <Head>
+    <Title> Sound Design - wongchunhoi9 </Title>
+    <Meta name="Work made by wong chun hoi"  />
+  </Head>
   <div class="container mx-auto md:px-4 px-2">
     <h1 class="text-4xl  my-8">
       Sound Design
@@ -14,18 +17,12 @@
             {{ post.medium }}
         </span>
          <NuxtImg :src="`${post.img}`" :alt="post.title" class=" w-full inset-0 bg-cover bg-center z-0" />
-         <!-- <p v-for="(category, n) in post.category" :key="n" class="inline-block text-xs px-3 bg-gray-100 mr-2" > {{ category }}  </p> -->
-         <div class="work-medium-and-year flex my-2">
-              <!-- <span class="bg-slate-50 text-gray-500 mx-4 px-4 ">
-                  {{ post.year }}
-              </span> -->
-          </div>
-          
+
           <div class="post-discription md:p-2 md:block hidden text-sm ">
               {{ post.description }}
           </div>
           <div class="tag-list px-1">
-              <div v-for="(category, n) in post.categories" :key="n" class="tag inline-block bg-gray-200 rounded px-3 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2" >{{ category }}</div>
+              <div v-for="(category, n) in post.category" :key="n" class="tag inline-block bg-gray-200 rounded px-3 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2" >{{ category }}</div>
           </div>
         </NuxtLink>
     </div>

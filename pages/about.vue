@@ -1,9 +1,6 @@
 <template>
 
 <div class="container mx-auto px-4 py-8">
-    <!-- <h1>
-        ABOUT
-    </h1>    -->
     <div class="md:flex">
         <div class="md shrink-0 mx-auto md:w-1/3 w-full">
             <NuxtImg

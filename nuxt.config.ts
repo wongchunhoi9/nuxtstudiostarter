@@ -1,5 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'wongchunhoi9.com', // default fallback title
+      htmlAttrs: {
+        lang: 'en',
+      },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ]
+    }
+  },
   modules: [
     '@nuxt/content',
     '@nuxt/image',
@@ -23,7 +34,9 @@ export default defineNuxtConfig({
   },
   image: {
     quality: 80 ,
-    rotate: null,
+    modifiers :{ 
+      rotate: null,
+    },
     screens: {
       xs: 320,
       sm: 640,
