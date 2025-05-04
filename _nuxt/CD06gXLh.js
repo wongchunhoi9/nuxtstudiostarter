@@ -1,1 +1,0 @@
-import{_ as s}from"./DlAUqK2U.js";import{e as t,f as a,Z as o}from"./7NK0TmDT.js";const r={},c={class:"md:flex md:flex-wrap"};function n(e,f){return a(),t("div",c,[o(e.$slots,"default")])}const m=Object.assign(s(r,[["render",n]]),{__name:"Fleximage"});export{m as default};
