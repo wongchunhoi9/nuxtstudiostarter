@@ -16,4 +16,3 @@ slug: asbdad
 
 2020-12-01 20:57:14\:brFortress, New Town Plaza, Sha Tin, Hong Kong
 
-![IMG\_0195.jpeg](/img/realScreenShot/WIP/IMG_0195.jpeg)![IMG\_0241.jpeg](/IMG_0241.jpeg)

@@ -150,7 +150,7 @@ onUnmounted(() => {
 }
 
 .toc-item {
-  @apply cursor-pointer text-sm text-gray-300 hover:text-gray-600 transition-colors py-1;
+  @apply cursor-pointer text-gray-300 hover:text-gray-600 transition-colors py-1;
 }
 
 .toc-item.active {
