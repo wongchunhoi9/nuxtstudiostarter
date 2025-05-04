@@ -25,12 +25,28 @@ useHead({
 </script>
 
 <template>
-  <div class="container max-w-6xl mx-auto md:px-4">
-    <h1 class="text-4xl font-extrabold my-7">{{ post.title }}</h1>
-    <p class="text-end">{{ post.medium }}</p>
-    <p class="text-end">{{ post.year }}</p>
+  <div class="container max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row gap-8">
+      <!-- Table of Contents Sidebar -->
+      <aside class="md:w-1/4 md:block hidden">
+        <TableOfContents :content="post" />
+      </aside>
 
-    <!-- Render the blog post as Prose & Vue components -->
-    <ContentRenderer :value="post" />
+      <!-- Main Content -->
+      <main class="md:w-3/4">
+        <h1 class="text-4xl font-extrabold my-7">{{ post.title }}</h1>
+        <p class="text-end">{{ post.medium }}</p>
+        <p class="text-end">{{ post.year }}</p>
+
+        <!-- Render the content with auto-generated ids for headings -->
+        <div class="max-w-none">
+          <ContentRenderer :value="post" />
+        </div>
+      </main>
+    </div>
   </div>
 </template>
+
+<style scoped>
+
+</style>

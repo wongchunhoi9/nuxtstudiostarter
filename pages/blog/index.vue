@@ -80,6 +80,7 @@ const filterStatus = computed(() => {
   return totalFilters > 0 ? `(${totalFilters} active)` : ''
 })
 </script>
+
 <template>
     <h1 class="text-4xl  mb-8 font-black ">
       Blog
@@ -176,7 +177,7 @@ const filterStatus = computed(() => {
     </aside>
 
     <!-- Blog Posts -->
-    <div class="w-full md:w-3/4 p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="w-full md:w-3/4 md:p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
       <NuxtLink
         v-for="post in filteredPosts"
         :key="post.path"

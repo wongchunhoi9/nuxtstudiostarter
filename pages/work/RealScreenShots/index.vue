@@ -118,7 +118,8 @@ const filterStatus = computed(() => {
     
   
     
-    <!-- Blog Posts -->
+    <!-- photo collection -->
+     <h1 class="">photo collection     </h1>
     <div class="w-full md:p-4 p-1 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 md:gap-2">
       <NuxtLink
       v-for="post in filteredPosts"
