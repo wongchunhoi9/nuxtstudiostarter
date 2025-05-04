@@ -74,7 +74,7 @@ onUnmounted(() => {
     <!-- Mobile TOC Toggle Button -->
     <button 
       @click="toggleDrawer"
-      class="md:hidden fixed bottom-4 right-4 bg-white shadow-lg rounded-full p-3 z-50"
+      class="md:hidden fixed bottom-4 left-4 bg-white shadow-lg rounded-full p-3 z-50"
     >
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
@@ -96,9 +96,9 @@ onUnmounted(() => {
     <nav 
       :class="[
         'toc-nav transition-transform duration-300',
-        'md:translate-x-0 md:static md:top-4',
-        isDrawerOpen ? 'translate-x-0' : 'translate-x-full',
-        'fixed right-0 top-0 h-screen bg-white z-40 w-64 shadow-lg md:shadow-none'
+        'md:translate-x-0 md:sticky md:top-4',
+        isDrawerOpen ? 'translate-x-0' : '-translate-x-full',
+        'fixed left-0 top-0 h-screen bg-white z-40 w-64 shadow-lg md:shadow-none'
       ]"
     >
       <!-- Mobile Close Button -->
@@ -124,8 +124,8 @@ onUnmounted(() => {
 
       <!-- TOC Content -->
       <div class="p-4">
-        <h3 class="text-lg font-semibold mb-4 md:hidden">Contents</h3>
-        <ul class="space-y-2">
+        <!-- <h3 class="text-lg font-semibold mb-4 md:hidden">Contents</h3> -->
+        <ul class="space-y-1">
           <li 
             v-for="item in tocItems" 
             :key="item.id"
@@ -150,11 +150,11 @@ onUnmounted(() => {
 }
 
 .toc-item {
-  @apply cursor-pointer text-gray-600 hover:text-gray-900 transition-colors py-1;
+  @apply cursor-pointer text-sm text-gray-300 hover:text-gray-600 transition-colors py-1;
 }
 
 .toc-item.active {
-  @apply text-black font-medium;
+  @apply text-gray-500 font-medium;
 }
 
 /* Prevent body scroll when mobile drawer is open */
