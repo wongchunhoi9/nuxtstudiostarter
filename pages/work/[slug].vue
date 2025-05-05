@@ -25,18 +25,21 @@ useHead({
 </script>
 
 <template>
-  <div class="container max-w-6xl mx-auto md:px-4">
-    <div class="flex flex-col md:flex-row gap-8">
+  <div class="container max-w-6xl mx-auto md:px-4 px-4">
+    <div class="flex flex-col md:flex-row">
       
       <!-- Table of Contents -->
-      <TableOfContents :content="post" />
+     
+   
+         <TableOfContents :content="post" />
+
 
       <!-- Main Content -->
       <main class="md:w-4/5">
         <div class=" py-4">
           <h1 class="text-4xl font-extrabold my-7">{{ post.title }}</h1>
-          <p>{{ post.medium }}</p>
-          <p>{{ post.year }}</p>
+          <p class="text-end">{{ post.medium }}</p>
+          <p class="text-end">{{ post.year }}</p>
         </div>
         <div class="max-w-none">
           <ContentRenderer :value="post" />
