@@ -35,7 +35,7 @@
                                     
                                     <!-- <NuxtImg src="img/testing/IMG_0083_rotate.jpeg" :alt="post.title" class=" w-full inset-0 bg-cover bg-center z-0" /> -->
                                     <NuxtImg 
-                                        :src="`${post.img}`" placeholder
+                                        :src="`${post.img}`" 
                                         :alt="post.title"
                                         :modifiers="{ rotate: null }" 
                                         quality="50"

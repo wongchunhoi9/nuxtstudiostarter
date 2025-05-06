@@ -132,7 +132,7 @@
             <p class="text-sm">{{ post.medium }}</p>
           </div>
           <NuxtImg
-            :src="`${post.img}`" placeholder
+            :src="`${post.img}`" 
             :alt="post.title"
             class="w-full inset-0 bg-cover bg-center z-0"
           />
