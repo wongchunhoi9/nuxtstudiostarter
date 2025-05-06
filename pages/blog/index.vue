@@ -185,7 +185,6 @@ const filterStatus = computed(() => {
         class="block mb-6"
       >
         <NuxtImg
-        loading="lazy"
         :src="`${post.img}`" placeholder
         :alt="post.title"
         quality="50"

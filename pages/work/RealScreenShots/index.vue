@@ -127,8 +127,7 @@ const filterStatus = computed(() => {
       :to="post.path"
       class="block md:mb-0"
       >
-      <NuxtImg
-      loading="lazy"
+      <NuxtImg      
       :src="`${post.img}`"
       :alt="post.title"
       :modifiers="{ rotate: null }" 
