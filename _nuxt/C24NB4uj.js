@@ -1,1 +1,0 @@
-import{_ as r}from"./DlAUqK2U.js";import{e as o,f as s,$ as a}from"./B6BnArpv.js";const l={},c={class:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1"};function t(e,n){return s(),o("div",c,[a(e.$slots,"default")])}const m=Object.assign(r(l,[["render",t]]),{__name:"ImageGalleryWrap3Column"});export{m as default};
