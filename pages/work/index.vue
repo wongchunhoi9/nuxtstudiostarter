@@ -83,7 +83,7 @@
       </p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-6 gap-8">
       <!-- Sidebar (Visible on Larger Screens) -->
       <aside class="hidden lg:block col-span-1">
         <h2 class="text-xl font-semibold mb-4 text-gray-500">Filters</h2>
@@ -119,7 +119,7 @@
       </aside>
 
       <!-- Work Posts -->
-      <div class="col-span-1 lg:col-span-4 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+      <div class="col-span-1 md:col-span-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
         <NuxtLink
           v-for="post in filteredPosts"
           :key="post.path"
