@@ -29,6 +29,8 @@
           :src="`${post.img}`"
           :alt="post.title"
           class="w-full inset-0 bg-cover bg-center z-0"
+          quality="80"
+          width="300"
         />
 
         <!-- Overlay -->

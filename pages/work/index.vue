@@ -135,6 +135,8 @@
             :src="`${post.img}`" 
             :alt="post.title"
             class="w-full inset-0 bg-cover bg-center z-0"
+            width="300"
+            quality="80"
           />
           <p
             v-for="(category, n) in post.category"

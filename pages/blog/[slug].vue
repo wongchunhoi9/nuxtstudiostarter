@@ -55,7 +55,7 @@ useHead({
     </div>
 
     <!-- Blog Content -->
-    <div class="col-span-1 lg:col-span-4 mx-auto">
+    <div class="col-span-1 lg:col-span-4 mx-auto w-full">
       <p>{{ formatDate(post.date) }}</p>
       <h1 class="text-3xl font-bold mb-4 ">{{ post.title }}</h1>
       <div class="article-tag gap-2 flex flex-wrap ">
