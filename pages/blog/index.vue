@@ -186,7 +186,7 @@ const filterStatus = computed(() => {
       >
         <NuxtImg
         loading="lazy"
-        :src="`${post.img}`"
+        :src="`${post.img}`" placeholder
         :alt="post.title"
         quality="50"
         width="500"
