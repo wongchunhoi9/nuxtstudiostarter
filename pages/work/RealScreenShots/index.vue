@@ -85,12 +85,17 @@ const filterStatus = computed(() => {
   return totalFilters > 0 ? `(${totalFilters} active)` : ''
 })
 </script>
+
 <template>
-  <div class="mx-auto max-w-full">
+  <div class="container mx-auto max-w-6xl px-4">
 
     <h1 class="px-4 text-4xl  my-4 font-bold">
-      Real Screenshots 螢幕快照
     </h1>
+    <div class="py-4">
+      <h1 class="text-4xl font-extrabold my-7">Real Screenshots 螢幕快照</h1>
+      <p class="">image image archive</p>
+      <p class="">on going from 2020</p>
+    </div>
     
     <!-- display showcase #1 @ pointsman -->
     <ContentRenderer :value="showcase1" />
@@ -119,7 +124,7 @@ const filterStatus = computed(() => {
   
     
     <!-- photo collection -->
-     <h1 class="">photo collection     </h1>
+     <!-- <h1 class="">photo collection     </h1> -->
     <div class="w-full md:p-4 p-1 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 md:gap-2">
       <NuxtLink
       v-for="post in filteredPosts"
@@ -132,7 +137,7 @@ const filterStatus = computed(() => {
       :alt="post.title"
       :modifiers="{ rotate: null }" 
       quality="50"
-      width="500"
+      width="200"
       class="w-full inset-0 z-0 md:mb-2 h-36 md:h-48 object-cover"
       />
       <div class="hidden md:block ">
