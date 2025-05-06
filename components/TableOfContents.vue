@@ -98,13 +98,13 @@ onUnmounted(() => {
         'toc-nav transition-transform duration-300',
         'md:translate-x-0 md:sticky md:top-4',
         isDrawerOpen ? 'translate-x-0' : '-translate-x-full',
-        'fixed left-0 top-0 h-screen bg-white z-40 w-64 shadow-lg md:shadow-none'
+        'fixed left-0 top-10 h-screen bg-white z-40 w-64 shadow-lg md:shadow-none'
       ]"
     >
       <!-- Mobile Close Button -->
       <button 
         @click="toggleDrawer"
-        class="md:hidden absolute top-4 right-4 p-2"
+        class="md:hidden absolute top-4 right-0 p-2"
       >
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
@@ -124,15 +124,15 @@ onUnmounted(() => {
 
       <!-- TOC Content -->
       <div class="p-4">
-        <!-- <h3 class="text-lg font-semibold mb-4 md:hidden">Contents</h3> -->
         <ul class="space-y-1">
           <li 
             v-for="item in tocItems" 
             :key="item.id"
             class="toc-item"
             :class="[
-              `pl-${(item.level - 1) * 4}`,
-              activeId === item.id ? 'active' : ''
+              activeId === item.id ? 'active' : '',
+              item.level === 2 ? 'pl-4' : '', // Indent for H2
+              item.level === 3 ? 'pl-8' : ''  // Indent for H3
             ]"
             @click="scrollToSection(item.id)"
           >

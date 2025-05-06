@@ -17,23 +17,19 @@ featureInHome: 'no'
 - 我做聲，我只想賣聲
 - 粉筆畫黑板其實算唔算直接騷擾腦部，好q暴力，而且永沒有客觀標準去度，斤以我有感覺聆覺神經學上的一d野可能都關事，唔單只係關聲音既content。更可以係佢metaphiscally上的事情  
 by Horowitz, Seth S - [The Universal Sense: How Hearing Shapes the Mind](https://archive.org/details/universalsenseho0000horo)
-- 另外sound drug 售賣，乜味都有，仲講到係毒品有bad trip咁wo，咁算點 [http://www.sound-drugs.com/](http://www.sound-drugs.com/) 
-**Sound-drugs website closed down 
+- 另外sound drug 售賣，乜味都有，仲講到係毒品有bad trip咁wo，咁算點 [http://www.sound-drugs.com/](http://www.sound-drugs.com/) **Sound-drugs website closed down 
 - elevator music 都係，仲要係painlessdrug
 - whether it is possible to get a III級 with sound only.
 
-### seems it can touch something about
-
+ ### seems it can touch something about
 - relationship with the embedding / relationship / priority of sound in the judgement , (e.g. censor) 即係，例如 假設happy tree friends (w/ sound) 係3級，咁 happy tree friends (w/O sound) 呢？ 又或者sound only，去同一個電檢。會點樣唔同法，censor panel會點judge
-- what sound /personal experience / scenario of listening / _____ is triggering / depicting the Cruelty, Torture or Violence / fear / harrasment / etc (not exactly the wording that shown ihe censor guideline. in Part V , 13 [whether the film portrays, depicts or treats cruelty, torture, violence, crime, horror, disability,sexuality or indecent or offensive language or behaviour.’ ]
-    - Zoie did told me something she thought the sound is super violence. that is a time when she was fighting 跆拳. and she was beaten to a “fake deaf state” which makes her feel fear and “ violence
-    - Gigi & Feipang told me some of their experience last night. but i forget. Need to ask them back
-    - so i found
-- 
+- what sound /personal experience / scenario of listening / _____ is triggering / depicting the Cruelty, Torture or Violence / fear / harrasment / etc (not exactly the wording that shown ihe censor guideline. in Part V , 13) whether the film portrays, depicts or treats cruelty, torture, violence, crime, horror, disability,sexuality or indecent or offensive language or behaviour.’ 
+- Zoie did told me something she thought the sound is super violence. that is a time when she was fighting 跆拳. and she was beaten to a “fake deaf state” which makes her feel fear and “ violence
+- Gigi & Feipang told me some of their experience last night. but i forget. Need to ask them back
+- so i found
 - what level did sound only can make the depictions of nudity
 - the language of talking about the element in cinema (image + sound + ??)
 - is the volume / amplitude / sound set up (e.g if 5.1 is easier to trigger than Stereo) of sound a matter? is it even ok ? or should I do atmos? or it actually doesnt really matters  
-- 
 
 ### or that I might need to reach:
 
@@ -43,7 +39,7 @@ by Horowitz, Seth S - [The Universal Sense: How Hearing Shapes the Mind](https:/
 - 電影、報刊及物品管理辦事處
     - 報 刊 及 物 品 管 理 科
     - 電 影 科
-- 
+- ?
 
 The judgement: Censor
 
@@ -59,7 +55,7 @@ and the law part:
 
 ---
 
-** When I go into this censor, the output (which I want to emphasis in the sound only must be in the form of Board casting / CINEMA , (which the Office of film, newspaper and article administration can handle with)
+** When I go into this censor, the output which I want to emphasis in the sound only must be in the form of Board casting / CINEMA , (which the Office of film, newspaper and article administration can handle with)
 
 in Screening [an event going to happened] / and export a DVD for the people to check in a room with watching the video (with sound) frame by frame with fast forward button pressed on the remote
 
@@ -89,7 +85,7 @@ some words i am searching
     - 黑社會的描繪
     - 提及某一類公眾人士的膚色、種族、宗教信仰、民族來源、原屬國籍或性別, 而以此污蔑或侮辱該類人士
 
-19. The degree to which standards for depiction of violence can be relaxed in relation to Category IIB and Category III can be generally considered in the following terms:--- (a) if violence is depicted in a way which would not cause terror in children, but might invite imitation, then it should be considered whether parental guidance is appropriate: this would indicate Category IIB; (b) if the violence is depicted in a way which might terrorize, hurt or seriously unsettle children and young people, but there are sufficient other elements in the film which might make such an effect justifiable, then the film can be shown under Category III.
+19 The degree to which standards for depiction of violence can be relaxed in relation to Category IIB and Category III can be generally considered in the following terms:--- (a) if violence is depicted in a way which would not cause terror in children, but might invite imitation, then it should be considered whether parental guidance is appropriate: this would indicate Category IIB; (b) if the violence is depicted in a way which might terrorize hurt or seriously unsettle children and young people,but there are sufficient other elements in the film which might make such an effect justifiable, then the film can be shown under Category III.
 
 19. 關於第 IIB 級和第 III 級影片描繪暴力標準的放寬程度,大致上可按下列情況考慮 : (a) 倘影片描繪的暴力不會使兒童產生恐懼,但可能會促使兒童模仿,則應考慮是否需要 規定在父母引導下才可觀看 ; 這顯示可把該影片列入第 IIB 級 ; (b) 倘影片描繪的暴力可能會令兒童和青少年感到恐懼、受到傷害或嚴重驚擾,但影片中 如有其他因素足以證明這種效果確有需要,則可把影片列入第 III 級放映。
 
@@ -168,9 +164,7 @@ otherwise it will charge $1400 each time
 - Mock review session in somewhere? 
 - how 
 
-
-
-some fact:
+## some fact:
 
 香港藝員謝霆鋒拍的第一套電影《新古惑仔之少年激鬥篇》是一套被評定為第III級的電影，但拍攝的時候他只有16歲。因此根據法例，電影完成後他亦不能觀看這套電影，直至一年多後，他年滿18歲才可以觀看。
 
@@ -182,9 +176,10 @@ Direct Association :
 - Tagging in the sound library with #violence usually are those hit, punch, metal broken debris, etc.
 - 操鄉音而被discriminate （大圍火車站事件）
 
+
 Noise Water Meat P.256   After taking LSD Anaïs Nin herself began to feel immersed in a fluid space as the doors , walls and windows began liquefying " It was as if I been plunged to the bottom of the sea, and everything had become undulating and wavering" Through this experience she discovered why women weep: "IT IS THE QUICKEST WAY TO REJOIN THE OCEAN"
 
-＃inspiration 1
+# inspiration 1
 Today I met 2 CUHK fine art students
 Vivian the girl suggest me to go through those pornographic for blind people. 
 \

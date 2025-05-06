@@ -128,7 +128,8 @@
         >
           <h2 class="text-3xl font-semibold">{{ post.title }}</h2>
           <div class="text-left">
-            <p>{{ formatDate(post.date) }}</p>
+            <p class="text-sm">{{ formatDate(post.date) }}</p>
+            <p class="text-sm">{{ post.medium }}</p>
           </div>
           <NuxtImg
             :src="`${post.img}`"

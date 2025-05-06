@@ -20,8 +20,6 @@ useHead({
     { property: 'og:url', content: `https://yourwebsite.com/work/${slug}` }
   ]
 })
-
-
 </script>
 
 <template>
@@ -29,17 +27,18 @@ useHead({
     <div class="flex flex-col md:flex-row">
       
       <!-- Table of Contents -->
-     
-   
-         <TableOfContents :content="post" />
+
+        <TableOfContents :content="post" />
 
 
       <!-- Main Content -->
-      <main class="md:w-4/5">
-        <div class=" py-4">
+      <main 
+        class="md:w-4/5 md:px-4"
+      >
+        <div class="py-4">
           <h1 class="text-4xl font-extrabold my-7">{{ post.title }}</h1>
-          <p class="text-end">{{ post.medium }}</p>
-          <p class="text-end">{{ post.year }}</p>
+          <p class="">{{ post.medium }}</p>
+          <p class="">{{ post.year }}</p>
         </div>
         <div class="max-w-none">
           <ContentRenderer :value="post" />
@@ -49,7 +48,6 @@ useHead({
     </div>
   </div>
 </template>
-
 <style scoped>
 
 </style>

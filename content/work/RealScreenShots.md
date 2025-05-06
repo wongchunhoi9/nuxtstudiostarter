@@ -1,14 +1,14 @@
 ---
-title: '[WIP] Real Screenshots 螢幕快照'
+title: 'Real Screenshots 螢幕快照'
 description: 'a series of images captured when i saw broken screen in city'
 date: 2024-05-31
 year: 'On Going'
 draft: 'true'
 layout: work
 tags: [image, tag2, tag3, tag4]
-category: [Image, electronics]
+category: [Image, electronics, ePaper]
 img: 'img/realScreenShot/Screenshot-20210513-cropped-web.jpg'
-medium: drawing, image
+medium: image, image archive
 featureInHome: 'yes'
 ---
 ## Photo collection

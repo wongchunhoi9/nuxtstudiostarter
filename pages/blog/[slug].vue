@@ -48,7 +48,7 @@ useHead({
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
     <!-- Left Column -->
-    <div class="block">
+    <div class="block ">
       <NuxtLink to="/blog" class=" text-slate-700 hover:underline">
         ← All Blog Posts
       </NuxtLink>
@@ -58,6 +58,16 @@ useHead({
     <div class="col-span-1 lg:col-span-4 mx-auto">
       <p>{{ formatDate(post.date) }}</p>
       <h1 class="text-3xl font-bold mb-4 ">{{ post.title }}</h1>
+      <div class="article-tag gap-2 flex flex-wrap ">
+          <div
+            v-for="(tag, n) in post.tags"
+            :key="n"
+            class="bg-gray-50 text-sm px-2 mr-2 rounded"
+          >
+            {{ tag }} 
+          </div>
+        </div>
+      <hr class="">
       <ContentRenderer :value="post" />
     </div>
   </div>
