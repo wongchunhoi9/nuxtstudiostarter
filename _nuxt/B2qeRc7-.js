@@ -1,1 +1,0 @@
-import{_ as s}from"./DlAUqK2U.js";import{e as o,f as t,$ as r}from"./DEzWoQXW.js";const c={},n={class:"font-semibold italic"};function a(e,_){return t(),o("em",n,[r(e.$slots,"default")])}const l=Object.assign(s(c,[["render",a]]),{__name:"ProseEm"});export{l as default};
