@@ -1,0 +1,1 @@
+import{_ as s}from"./DlAUqK2U.js";import{e as o,f as r,$ as a}from"./DBbF-ruL.js";const t={},c={class:"md:grid md:grid-cols-2 gap-2 md:gap-4"};function n(e,d){return r(),o("div",c,[a(e.$slots,"default")])}const f=Object.assign(s(t,[["render",n]]),{__name:"Samerow"});export{f as default};
