@@ -1,3 +1,14 @@
+---
+title: Exhibition view @ footnotes to lingering, Pointsman artspace 2025
+description: 'a series of images captured when i saw broken screen in city'
+date: 2025-04-21
+time: 14:29:46 
+location: Fortress, New Town Plaza, Sha Tin, Hong Kong 
+tags: [faulty LED,Hong Kong]
+category: [Image, electronics]
+img: /img/realScreenShot/WIP/_DSF3075.jpg
+---
+
 ## Exhibition view @ footnotes to lingering, Pointsman artspace 2025
 ::imageGalleryWrap3Column
     :::imageGallerySpan2
