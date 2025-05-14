@@ -18,8 +18,8 @@ try {
 }
 
 // Debug: Log documents and error
-console.log('Documents:', documents.value)
-console.log('Fetch Error:', fetchError.value)
+// console.log('Documents:', documents.value)
+// console.log('Fetch Error:', fetchError.value)
 
 // Initialize MiniSearch
 const miniSearch = new MiniSearch({
