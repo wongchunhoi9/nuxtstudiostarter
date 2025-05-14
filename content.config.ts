@@ -32,7 +32,7 @@ export default defineContentConfig({
       source: {
         include: "work/**",
         // exclude: ["about/**",'**/.*'],
-        exclude: ["work/.*","work/.draft/**","work/realscreenshots/**"],
+        exclude: ["work/.*","work/.draft/**","work/realscreenshots/**","work/lostandfoundanythingstore/**"],
         // prefix: '/',
       },
       schema: z.object({
@@ -65,6 +65,40 @@ export default defineContentConfig({
         
       })
     }),
+    LostAndFoundAnythingStore: defineCollection({
+      type: 'page',
+      // source: 'work/*.md',
+      source: {
+        include: "work/lostandfoundanythingstore/**",
+        // exclude: ["about/**",'**/.*'],
+        // exclude: ["work/.*","work/.draft/**","work/RealScreenShots/**"],
+        // prefix: '/',
+      },
+      schema: z.object({
+        date: z.date(),
+        tags: z.array(z.string()),
+        category: z.array(z.string()),
+        img: z.string(),
+        location: z.string(),
+        time: z.string(),
+        description: z.string(),
+        FoundItemName: z.string(),
+        customeID: z.string(),
+        whoFound: z.string(),
+        foundDate: z.string(),
+        foundLocation: z.string(),
+        media:z.array(z.string()),
+        active: z.boolean(),
+        modelEmbeddedLink: z.string(),
+        size: z.string(),
+        modelThumbnail: z.string(),
+        itemStoryEnglish: z.string(),
+        itemStoryChinese: z.string(),
+        spec1: z.string(),
+        spec2: z.string(),
+        
+      })
+    }),
     soundDesign: defineCollection({
       type: 'page',
       // source: 'work/*.md',
@@ -91,7 +125,7 @@ export default defineContentConfig({
       source: {
         include: "**/*",
         // exclude: ["about/**",'**/.*'],
-        exclude: ["about/**",'**/.*','work/.*','work/.draft/**','work/realscreenshots/**'],
+        exclude: ["about/**",'**/.*','work/.*','work/.draft/**','work/realscreenshots/**','work/lostandfoundanythingstore/**'],
         // prefix: '/',
       },
       schema: z.object({

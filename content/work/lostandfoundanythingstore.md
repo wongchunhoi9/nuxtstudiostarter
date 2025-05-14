@@ -15,9 +15,9 @@ featureInHome: 'yes'
 
 <!-- Lost and Found Anything Store is a long term project. The artist take the initiative to uncover and focus on the abandoned lost objects in certain sites, which will be transformed into digital 3D models and re-imagined in a half-realistic, half-inferential free-association. In the midst of the unpredictable objects, a small history is written with these young relics -->
 
-
+# Project Website: 
 ::card
-# **Project Website:** 
+
 [https://lostandfoundanythingstore.com/](https://lostandfoundanythingstore.com/)
 ::
 

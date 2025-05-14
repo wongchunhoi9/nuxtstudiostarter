@@ -96,71 +96,53 @@ const filterStatus = computed(() => {
       <p class="">image image archive</p>
       <p class="">on going from 2020</p>
     </div>
+
     
     <!-- display showcase #1 @ pointsman -->
     <ContentRenderer :value="showcase1" />
 
-    <div class="flex flex-col md:flex-row">
-      <!-- Drawer Toggle Button for Responsive View -->
-      <button
-      class="md:hidden p-2 bg-gray-200 text-gray-700 rounded mb-4 "
-      @click="toggleDrawer"
-      >
-      <span>
-        {{ isDrawerOpen ? 'Close Filters' : ' Filters' }}
-      </span>
-      <span v-if="selectedCategories.length || dateFilter.from || dateFilter.to" class="ml-2 text-sm text-gray-500">
-        (Applied: 
-        <span v-for="(tag, index) in selectedCategories" :key="tag">
-          {{ tag }}<span v-if="index < selectedCategories.length - 1">, </span>
-        </span>
-        <span v-if="dateFilter.from || dateFilter.to">
-          {{ dateFilter.from ? `From: ${dateFilter.from}` : '' }}
-          {{ dateFilter.to ? `To: ${dateFilter.to}` : '' }}
-        </span>)
-      </span>
-    </button>
     
-  
+
     
     <!-- photo collection -->
-     <!-- <h1 class="">photo collection     </h1> -->
-    <div class="w-full md:p-4 p-1 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 md:gap-2">
+     <h1 class="">photo collection     </h1>
+
+    <div class="w-full  p-1 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 ">
       <NuxtLink
       v-for="post in filteredPosts"
       :key="post.path"
       :to="post.path"
-      class="block md:mb-0"
+      class="block md:mb-0 hover:z-10  relative"
       >
+      <div class="md:bg-relayorange  from-black md:opacity-0 hover:opacity-80  md:absolute inset-0 z-10  md:justify-center flex flex-col font-semibold items-center text-black md:text-xl text-2xl  p-2 ">
+          {{ post.title }}
+          <br>
+
+      </div>
+      
       <NuxtImg      
       :src="`${post.img}`"
       :alt="post.title"
       :modifiers="{ rotate: null }" 
       quality="50"
-      width="200"
-      class="w-full inset-0 z-0 md:mb-2 h-36 md:h-48 object-cover"
+      width="100"
+      height="100"
+      class="w-full inset-0 z-0 h-full  object-cover transition-all duration-200 ease-in-out transform hover:scale-110 hover:shadow-lg relative"
       />
-      <div class="hidden md:block ">
+      <!-- image overlay on hover image  -->
+
+
+      <!-- <div class="hidden md:block ">
         <h2 class="text-xl font-bold mb-2">{{ post.title }}</h2>
         <div class="flex">
           <p class="text-sm text-gray-500 pr-4">{{ formatDate(post.date) }}</p>
           <p class="text-sm text-gray-500">{{post.time }}</p> 
         </div>
         <p class="text-sm text-gray-500">{{ post.location}}</p>
-        <!-- <p class="mb-2">{{ post.description }}</p> -->
-        <!-- <div class="article-tag gap-2 flex flex-wrap mb-2">
-          <div
-          v-for="(tag, n) in post.tags"
-          :key="n"
-          class="bg-gray-200 px-2 py-1 rounded"
-          >
-          {{ tag }}
-        </div>
-      </div> -->
+    </div> -->
+      </NuxtLink>
     </div>
-  </NuxtLink>
-</div>
-</div>
+
 </div>
 </template>
 
