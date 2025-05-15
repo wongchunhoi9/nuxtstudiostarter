@@ -105,16 +105,16 @@ const filterStatus = computed(() => {
 
     
     <!-- photo collection -->
-     <h1 class="">photo collection     </h1>
+     <h1 class="text-4xl font-bold py-2">photo collection     </h1>
 
     <div class="w-full  p-1 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 ">
       <NuxtLink
       v-for="post in filteredPosts"
       :key="post.path"
       :to="post.path"
-      class="block md:mb-0 hover:z-10  relative"
+      class="block md:mb-0 hover:z-10  md:relative"
       >
-      <div class="md:bg-relayorange  from-black md:opacity-0 hover:opacity-80  md:absolute inset-0 z-10  md:justify-center flex flex-col font-semibold items-center text-black md:text-xl text-2xl  p-2 ">
+      <div class="hidden md:bg-relayorange  from-black md:opacity-0 hover:opacity-80  md:absolute inset-0 z-10  md:justify-center md:flex flex-col font-semibold items-center text-black md:text-xl text-2xl  p-2 ">
           {{ post.title }}
           <br>
 
@@ -127,7 +127,7 @@ const filterStatus = computed(() => {
       quality="50"
       width="100"
       height="100"
-      class="w-full inset-0 z-0 h-full  object-cover transition-all duration-200 ease-in-out transform hover:scale-110 hover:shadow-lg relative"
+      class=" aspect-square w-full inset-0 z-0 h-full  object-cover transition-all duration-200 ease-in-out transform hover:scale-110 hover:shadow-lg relative"
       />
       <!-- image overlay on hover image  -->
 

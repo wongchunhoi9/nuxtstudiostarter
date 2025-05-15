@@ -1,3 +1,59 @@
+
+<script setup lang="ts">
+const route = useRoute()
+const { data: allPosts } = await useAsyncData(route.path, async () => {
+  return queryCollection('work')
+    .order('date', 'DESC')
+    .all()
+})
+
+// State for filters
+import { ref, computed } from 'vue'
+const selectedCategory = ref(null)
+const showFilters = ref(false) // State for toggling filters on mobile
+
+// Get unique categories with null checking
+const uniqueCategories = computed(() => {
+  if (!allPosts.value) return []
+  return [...new Set(allPosts.value.map((post) => post.category || []).flat())]
+})
+
+// Filtered posts with null checking
+const filteredPosts = computed(() => {
+  if (!allPosts.value) return []
+  return allPosts.value.filter((post) => {
+    if (!post.category) return false
+    const matchesCategory =
+      !selectedCategory.value || post.category.includes(selectedCategory.value)
+    return matchesCategory
+  })
+})
+
+// Filter functions
+function filterByCategory(category) {
+  selectedCategory.value = selectedCategory.value === category ? null : category
+}
+
+// Reset filters
+function resetFilters() {
+  selectedCategory.value = null
+}
+
+// Toggle filters for mobile view
+function toggleFilters() {
+  showFilters.value = !showFilters.value
+}
+
+function formatDate(inputDate: string | number | Date) {
+  const date = new Date(inputDate)
+  const year = date.getFullYear()
+  const month = date.getMonth()
+  const day = date.getDate()
+  const formattedDate = year // display year only
+  return formattedDate
+}
+</script>
+
 <template>
     <Head>
     <Title> Work - wongchunhoi9 </Title>
@@ -153,58 +209,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-const route = useRoute()
-const { data: allPosts } = await useAsyncData(route.path, async () => {
-  return queryCollection('work')
-    .order('date', 'DESC')
-    .all()
-})
-
-// State for filters
-import { ref, computed } from 'vue'
-const selectedCategory = ref(null)
-const showFilters = ref(false) // State for toggling filters on mobile
-
-// Get unique categories with null checking
-const uniqueCategories = computed(() => {
-  if (!allPosts.value) return []
-  return [...new Set(allPosts.value.map((post) => post.category || []).flat())]
-})
-
-// Filtered posts with null checking
-const filteredPosts = computed(() => {
-  if (!allPosts.value) return []
-  return allPosts.value.filter((post) => {
-    if (!post.category) return false
-    const matchesCategory =
-      !selectedCategory.value || post.category.includes(selectedCategory.value)
-    return matchesCategory
-  })
-})
-
-// Filter functions
-function filterByCategory(category) {
-  selectedCategory.value = selectedCategory.value === category ? null : category
-}
-
-// Reset filters
-function resetFilters() {
-  selectedCategory.value = null
-}
-
-// Toggle filters for mobile view
-function toggleFilters() {
-  showFilters.value = !showFilters.value
-}
-
-function formatDate(inputDate: string | number | Date) {
-  const date = new Date(inputDate)
-  const year = date.getFullYear()
-  const month = date.getMonth()
-  const day = date.getDate()
-  const formattedDate = year // display year only
-  return formattedDate
-}
-</script>
