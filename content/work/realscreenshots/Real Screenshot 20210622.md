@@ -14,5 +14,6 @@ img: /img/realScreenShot/20201201-205714.jpg
 slug: asbdad
 ---
 
+![asd](/img/realScreenShot/20201201-205714.jpg)
 2020-12-01 20:57:14\:brFortress, New Town Plaza, Sha Tin, Hong Kong
 

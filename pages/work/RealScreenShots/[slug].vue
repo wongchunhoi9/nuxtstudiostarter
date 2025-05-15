@@ -15,7 +15,7 @@ const { data: surroundings } = await useAsyncData(`realscreenshots-surroundings-
   })
 })
 
-console.log('surroundings', surroundings)
+// console.log('surroundings', surroundings)
 // Add computed properties for better readability
 // const previousPost = computed(() => surroundings.value?.[0])
 // const nextPost = computed(() => surroundings.value?.[1])

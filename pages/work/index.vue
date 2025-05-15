@@ -156,7 +156,7 @@
 
 <script setup lang="ts">
 const route = useRoute()
-const { data: allPosts } = await useAsyncData(route.path, () => {
+const { data: allPosts } = await useAsyncData(route.path, async () => {
   return queryCollection('work')
     .order('date', 'DESC')
     .all()
@@ -167,14 +167,17 @@ import { ref, computed } from 'vue'
 const selectedCategory = ref(null)
 const showFilters = ref(false) // State for toggling filters on mobile
 
-// Get unique categories
-const uniqueCategories = computed(() =>
-  [...new Set(allPosts.value.map((post) => post.category).flat())]
-)
+// Get unique categories with null checking
+const uniqueCategories = computed(() => {
+  if (!allPosts.value) return []
+  return [...new Set(allPosts.value.map((post) => post.category || []).flat())]
+})
 
-// Filtered posts based on selected filters
+// Filtered posts with null checking
 const filteredPosts = computed(() => {
+  if (!allPosts.value) return []
   return allPosts.value.filter((post) => {
+    if (!post.category) return false
     const matchesCategory =
       !selectedCategory.value || post.category.includes(selectedCategory.value)
     return matchesCategory
