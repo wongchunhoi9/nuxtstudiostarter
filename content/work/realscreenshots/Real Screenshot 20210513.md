@@ -7,6 +7,7 @@ location: Central, Hong Kong
 tags: [Hong Kong , facade]
 category: [Image, electronics]
 img: /img/realScreenShot/Screenshot-20210513-cropped-web.jpg
+singleCollection: true
 ---
 
 ### Real Screenshot #20210513

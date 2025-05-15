@@ -62,6 +62,7 @@ export default defineContentConfig({
         img: z.string(),
         location: z.string(),
         time: z.string(),
+        singleCollection: z.boolean(),
         
       })
     }),

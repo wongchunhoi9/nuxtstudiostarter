@@ -7,6 +7,7 @@ location: Sha Tin MTR Station, Hong Kong
 tags: [Hong Kong , public transport]
 category: [Image, electronics]
 img: /img/realScreenShot/20210610-web.jpg
+singleCollection: true
 ---
 
 ### Real Screenshot #20210610

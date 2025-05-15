@@ -40,7 +40,7 @@
                                         :modifiers="{ rotate: null }" 
                                         quality="50"
                                         width="200"
-                                        class=" w-full  inset-0 bg-cover bg-center z-0 grayscale-75" />
+                                        class=" w-full  inset-0 bg-cover bg-center z-0" />
 
 
                                 </div>

@@ -12,6 +12,7 @@ category:
   - electronics
 img: /img/realScreenShot/20201201-205714.jpg
 slug: asbdad
+singleCollection: true
 ---
 
 ![asd](/img/realScreenShot/20201201-205714.jpg)

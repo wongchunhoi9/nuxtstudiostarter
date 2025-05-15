@@ -22,7 +22,7 @@ const { data: surroundings } = await useAsyncData(`realscreenshots-surroundings-
 </script>
 
 <template>
-  <div class="container mx-auto md:px-4 max-w-4xl">
+  <div class="container mx-auto md:px-4 max-w-4xl px-2">
     <!-- Render the blog post as Prose & Vue components -->
     <ContentRenderer :value="post" />
 
@@ -30,9 +30,9 @@ const { data: surroundings } = await useAsyncData(`realscreenshots-surroundings-
     <div class="mt-8">
       <NuxtLink 
         to="/work/realscreenshots#photocollection"
-        class="text-blue-500 hover:underline"
+        class="text-black text-xl font-bold hover:underline"
       >
-        back
+       ←  back
       </NuxtLink>
     </div>
 
@@ -60,7 +60,8 @@ const { data: surroundings } = await useAsyncData(`realscreenshots-surroundings-
             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
             :modifiers="{ rotate: null }"
-            quality="50"
+            quality="10"
+            :placeholder="15"
 
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/95 to-transparent flex items-end p-4">
@@ -90,6 +91,8 @@ const { data: surroundings } = await useAsyncData(`realscreenshots-surroundings-
             :alt="surroundings[1].title"
             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
+            quality="10"
+            :placeholder="15"
             :modifiers="{ rotate: null }"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/95 to-transparent flex items-end p-4">

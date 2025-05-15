@@ -7,6 +7,7 @@ location: on MTR, East Rail Line, Hong Kong
 tags: [Hong Kong , public transport]
 category: [Image, electronics]
 img: /img/realScreenShot/20201224-1721-3-web.jpg
+singleCollection: true
 ---
 
 ### Real Screenshot #20201224

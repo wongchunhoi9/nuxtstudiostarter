@@ -7,6 +7,7 @@ location: Fortress, New Town Plaza, Sha Tin, Hong Kong
 tags: [faulty LED,Hong Kong]
 category: [Image, electronics]
 img: /img/realScreenShot/WIP/_DSF3075.jpg
+singleCollection: false
 ---
 
 ## Exhibition view @ footnotes to lingering, Pointsman artspace 2025

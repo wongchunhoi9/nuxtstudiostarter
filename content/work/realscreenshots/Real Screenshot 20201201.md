@@ -8,6 +8,7 @@ tags: [stand by mode,Hong Kong]
 category: [Image, electronics]
 img: /img/realScreenShot/20201201-205714.jpg
 slug: asbdad
+singleCollection: true
 ---
 
  ![Alttext](/img/realScreenShot/20201201-205714.jpg)  

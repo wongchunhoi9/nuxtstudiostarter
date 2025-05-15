@@ -5,11 +5,20 @@
         <div class="text-3xl my-7 font-bold">
           {{ error.statusCode }}
         </div>
-        <div>
+        <div class="text-2xl my-7 font-italic font-mono">
+          {{ error.statusMessage }}
           {{ error.message }}
         </div>
         <div>
-          but error can be good
+          <p>
+            but error can be good sometimes
+          </p>
+          <p>
+            Recommended Browser: Google Chrome, microsoft edge, firefox or safari version 17 or later
+          </p>
+        </div>
+        <div class="text-3xl my-7 font-bold">
+          <NuxtLink to="/">Go back to home</NuxtLink>
         </div>
         <NuxtImg
           class="mx-auto my-4"

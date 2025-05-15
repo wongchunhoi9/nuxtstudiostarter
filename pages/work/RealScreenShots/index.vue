@@ -3,6 +3,7 @@ const route = useRoute()
 const { data: allPosts } = await useAsyncData(route.path, () => {
   return queryCollection('RealScreenShots')
     .order('date', 'DESC')
+    .where('singleCollection', '=', true)
     .all()
 })
 const showcase1  = await queryCollection('RealScreenShots').path(`/work/realscreenshots/showcase1`).first()
@@ -97,15 +98,9 @@ const filterStatus = computed(() => {
       <p class="">on going from 2020</p>
     </div>
 
-    
-    <!-- display showcase #1 @ pointsman -->
-    <ContentRenderer :value="showcase1" />
 
-    
-
-    
     <!-- photo collection -->
-     <h1 class="text-4xl font-bold py-2">photo collection     </h1>
+     <h1 class="text-4xl font-bold py-2" id="photocollection">photo collection     </h1>
 
     <div class="w-full  p-1 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 ">
       <NuxtLink
@@ -142,7 +137,8 @@ const filterStatus = computed(() => {
     </div> -->
       </NuxtLink>
     </div>
-
+    <!-- display showcase #1 @ pointsman -->
+    <ContentRenderer :value="showcase1" />
 </div>
 </template>
 
