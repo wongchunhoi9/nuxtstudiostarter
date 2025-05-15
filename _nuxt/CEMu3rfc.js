@@ -1,0 +1,1 @@
+import{_ as a}from"./DlAUqK2U.js";import{e as l,f as s,a1 as t}from"./LG4ww_o2.js";const o={},r={class:"max-h-full h-auto max-w-full"};function n(e,c){return s(),l("div",r,[t(e.$slots,"default")])}const m=Object.assign(a(o,[["render",n]]),{__name:"ImageGallerySingle"});export{m as default};
