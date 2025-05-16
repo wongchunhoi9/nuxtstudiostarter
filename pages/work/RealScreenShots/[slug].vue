@@ -13,16 +13,20 @@ const { data: surroundings } = await useAsyncData(`realscreenshots-surroundings-
     after: 1,
     fields: ['img']
   })
+  .where('singleCollection', '=', true)
 })
+
 
 // console.log('surroundings', surroundings)
 // Add computed properties for better readability
 // const previousPost = computed(() => surroundings.value?.[0])
 // const nextPost = computed(() => surroundings.value?.[1])
+
 </script>
 
 <template>
-  <div class="container mx-auto md:px-4 max-w-4xl px-2">
+
+  <div class="container mx-auto md:px-4 max-w-6xl">
     <!-- Render the blog post as Prose & Vue components -->
     <ContentRenderer :value="post" />
 
@@ -30,9 +34,9 @@ const { data: surroundings } = await useAsyncData(`realscreenshots-surroundings-
     <div class="mt-8">
       <NuxtLink 
         to="/work/realscreenshots#photocollection"
-        class="text-black text-xl font-bold hover:underline"
+        class="text-blue-500 hover:underline"
       >
-       ←  back
+        back
       </NuxtLink>
     </div>
 
@@ -60,8 +64,7 @@ const { data: surroundings } = await useAsyncData(`realscreenshots-surroundings-
             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
             :modifiers="{ rotate: null }"
-            quality="10"
-            :placeholder="15"
+            quality="50"
 
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/95 to-transparent flex items-end p-4">
@@ -85,14 +88,12 @@ const { data: surroundings } = await useAsyncData(`realscreenshots-surroundings-
           </div>
         </div>
         <!-- Image and Title -->
-        <div class="relative h-full">
+        <div class="  relative h-full">
           <NuxtImg
             :src="`${surroundings[1].img}`"
             :alt="surroundings[1].title"
             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
-            quality="10"
-            :placeholder="15"
             :modifiers="{ rotate: null }"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/95 to-transparent flex items-end p-4">

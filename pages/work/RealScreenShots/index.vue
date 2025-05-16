@@ -94,8 +94,9 @@ const filterStatus = computed(() => {
     </h1>
     <div class="py-4">
       <h1 class="text-4xl font-extrabold my-7">Real Screenshots 螢幕快照</h1>
-      <p class="">image image archive</p>
-      <p class="">on going from 2020</p>
+      <p class=" text-end">image, image archive</p>
+      <p class="text-end">on going from 2020</p>
+      <p>a series of images captured when i saw broken screen in city</p>
     </div>
 
 

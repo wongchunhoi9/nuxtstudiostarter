@@ -188,7 +188,7 @@ const filterStatus = computed(() => {
         :src="`${post.img}`" 
         :alt="post.title"
         quality="50"
-        width="500"
+        :modifiers="{ rotate: null }"
         class="w-full inset-0 bg-cover bg-center z-0 mb-2"
         />
         <h2 class="text-xl font-bold mb-2">{{ post.title }}</h2>
