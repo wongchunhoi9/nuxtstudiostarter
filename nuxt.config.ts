@@ -34,6 +34,7 @@ export default defineNuxtConfig({
   },
   image: {
     quality: 80 ,
+    domains: ['wongchunhoi9.com'],
     modifiers :{ 
       rotate: null,
     },
