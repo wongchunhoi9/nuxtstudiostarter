@@ -1,1 +1,0 @@
-import{_ as r}from"./DlAUqK2U.js";import{e as a,f as o,a2 as s}from"./BPU3uX88.js";const t={},c={class:"grid grid-cols-1 md:grid-cols-2 gap-1"};function l(e,n){return o(),a("div",c,[s(e.$slots,"default")])}const d=Object.assign(r(t,[["render",l]]),{__name:"ImageGalleryWrap2Column"});export{d as default};
