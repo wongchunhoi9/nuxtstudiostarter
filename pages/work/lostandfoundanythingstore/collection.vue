@@ -135,7 +135,7 @@ const previousImage = (media: string[]) => {
                 :src="media"
                 :alt="`${post.FoundItemName} - Image ${index + 1}`"
                 class="w-full h-full object-conatin"
-                quality="75"
+                quality="80"
                 loading="lazy"
                 height="100"
                 width="100"
@@ -173,7 +173,7 @@ const previousImage = (media: string[]) => {
                   :src="post.media[currentImageIndex]"
                   :alt="`${post.FoundItemName} - Image ${currentImageIndex + 1}`"
                   class="w-full h-full object-contain"
-                  quality="85"
+                  quality="80"
                   :modifiers="{ rotate: null }"
                 />
               </div>
