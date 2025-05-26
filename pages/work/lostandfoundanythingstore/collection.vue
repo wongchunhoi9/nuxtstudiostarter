@@ -8,7 +8,7 @@ interface LostItem {
   whoFound: string
   foundLocation: string
   foundDate: string
-  Media: string[]
+  media: string[]
   active: boolean
   path: string
 }
