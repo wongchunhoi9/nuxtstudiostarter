@@ -59,12 +59,13 @@ const previousImage = (media: string[]) => {
     </h1>
     
     <!-- Table Header -->
-    <div class="hidden md:grid md:grid-cols-5 gap-4 py-2 px-4 bg-gray-100 font-medium text-sm">
+    <div class="hidden md:grid md:grid-cols-[40px_80px_1.5fr_1fr_1fr_1fr] gap-4 py-2 px-4 bg-gray-100 font-medium text-sm">
+      <div>ID</div>
+      <div>Thumb</div>
       <div>Item Name</div>
       <div>Found By</div>
       <div>Location</div>
       <div>Found Date</div>
-      <div>ID</div>
     </div>
 
     <!-- Items List -->
@@ -77,48 +78,49 @@ const previousImage = (media: string[]) => {
         @mouseleave="handleHover(null)"
       >
         <!-- Item Row -->
-        <div
+          <div
           @click="toggleItem(post.path)"
-          class="group grid md:grid-cols-5 gap-4 py-4 px-4 cursor-pointer hover:bg-gray-50"
+          class="group grid md:grid-cols-[40px_80px_1.5fr_1fr_1fr_1fr] gap-4 py-4 px-4 cursor-pointer hover:bg-gray-50"
+          >
+            <!-- ID Column -->
+            <div class="flex ">
+              <span>{{ post.customeID }}</span>
+            </div>
+            <!-- Thumbnail Column -->
+            <div class="relative">
+              <!-- Main Thumbnail -->
+              <div class="w-16 h-16 rounded-md overflow-hidden">
+                <img
+                  :src="post.media?.[0] || '/placeholder.jpg'"
+                  :alt="post.FoundItemName"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="flex ">
+              <span>{{ post.FoundItemName }}</span>
+            </div>
+            <div>{{ post.whoFound || 'Unknown' }}</div>
+            <div>{{ post.foundLocation || 'Unknown' }}</div>
+      <div class="flex  justify-between">
+        <span>{{ post.foundDate || 'Unknown' }}</span>
+        <svg
+          class="w-5 h-5 transform transition-transform duration-200"
+          :class="expandedItems.has(post.path) ? 'rotate-180' : ''"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
         >
-          <!-- Item Details -->
-          <div class="flex items-center">
-            <svg
-              class="w-5 h-5 text-gray-400 group-hover:text-gray-600 mr-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
-              />
-            </svg>
-            <span>{{ post.FoundItemName }}</span>
-          </div>
-          <div>{{ post.whoFound || 'Unknown' }}</div>
-          <div>{{ post.foundLocation || 'Unknown' }}</div>
-          <div>{{ post.foundDate || 'Unknown' }}</div>
-          <div class="flex items-center justify-between">
-            <span>{{ post.customeID }}</span>
-            <svg
-              class="w-5 h-5 transform transition-transform duration-200"
-              :class="expandedItems.has(post.path) ? 'rotate-180' : ''"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </div>
-        </div>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </div>
+    </div>
 
         <!-- Thumbnails Preview Row -->
         <div
@@ -147,14 +149,14 @@ const previousImage = (media: string[]) => {
           </div>
         </div>
 
-        <!-- Expanded Content -->
+        <!-- Replace the Expanded Content section -->
         <div
           v-show="expandedItems.has(post.path)"
           class="overflow-hidden transition-all duration-300 p-4"
         >
-          <div class="flex gap-4">
+          <div class="flex flex-col md:flex-row gap-4">
             <!-- 3D Model Column -->
-            <div class="w-1/3 aspect-square bg-gray-100 rounded-lg overflow-hidden">
+            <div class="w-full md:w-1/3 aspect-square bg-gray-100 rounded-lg overflow-hidden">
               <iframe
                 v-if="post.modelEmbeddedLink"
                 :src="post.modelEmbeddedLink"
@@ -168,7 +170,7 @@ const previousImage = (media: string[]) => {
             </div>
 
             <!-- Image Gallery Column -->
-            <div class="w-1/3 relative">
+            <div class="w-full md:w-1/3 relative">
               <div class="aspect-square rounded-lg overflow-hidden">
                 <NuxtImg
                   v-if="post.media?.length"
@@ -182,66 +184,52 @@ const previousImage = (media: string[]) => {
               
               <!-- Navigation Arrows -->
               <button 
-                @click="previousImage(post.media)"
-                class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full"
+                v-if="post.media?.length > 1"
+                @click.stop="previousImage(post.media)"
+                class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 md:p-3 rounded-full"
               >
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
               
               <button 
-                @click="nextImage(post.media)"
-                class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full"
+                v-if="post.media?.length > 1"
+                @click.stop="nextImage(post.media)"
+                class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 md:p-3 rounded-full"
               >
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
               </button>
 
               <!-- Image Counter -->
-              <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+              <div 
+                v-if="post.media?.length > 1"
+                class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-xs md:text-sm"
+              >
                 {{ currentImageIndex + 1 }} / {{ post.media?.length }}
               </div>
             </div>
 
             <!-- Information Column -->
-            <div class="w-1/3 space-y-4">
+            <div class="w-full md:w-1/3 space-y-4 mt-4 md:mt-0">
               <h3 class="text-xl font-medium">{{ post.FoundItemName }}</h3>
               
               <div class="space-y-2 text-sm">
                 <p class="text-gray-600">{{ post.description }}</p>
                 
                 <div class="grid gap-2">
-                  <div class="flex justify-between border-b border-gray-200 py-1">
-                    <span class="text-gray-500">ID:</span>
-                    <span>{{ post.customeID }}</span>
-                  </div>
-                  <div class="flex justify-between border-b border-gray-200 py-1">
-                    <span class="text-gray-500">Found By:</span>
-                    <span>{{ post.whoFound || 'Unknown' }}</span>
-                  </div>
-                  <div class="flex justify-between border-b border-gray-200 py-1">
-                    <span class="text-gray-500">Location:</span>
-                    <span>{{ post.foundLocation || 'Unknown' }}</span>
-                  </div>
-                  <div class="flex justify-between border-b border-gray-200 py-1">
-                    <span class="text-gray-500">Date:</span>
-                    <span>{{ post.foundDate || 'Unknown' }}</span>
-                  </div>
-                  <div class="flex justify-between border-b border-gray-200 py-1">
-                    <span class="text-gray-500">Size:</span>
-                    <span>{{ post.size || 'N/A' }}</span>
-                  </div>
+                  <!-- ...existing specification fields... -->
                 </div>
 
-                <div class="mt-4 space-y-2">
+                <div class="mt-4 space-y-2 border-t pt-4">
                   <h4 class="font-medium">Specifications:</h4>
                   <p>{{ post.spec1 }}</p>
                   <p>{{ post.spec2 }}</p>
                 </div>
 
-                <div class="mt-4" v-if="post.itemStoryEnglish || post.itemStoryChinese">
+                <div class="mt-4 border-t pt-4" v-if="post.itemStoryEnglish || post.itemStoryChinese">
                   <h4 class="font-medium mb-2">Item Story:</h4>
                   <p class="mb-2">{{ post.itemStoryEnglish }}</p>
                   <p class="font-noto-tc">{{ post.itemStoryChinese }}</p>
