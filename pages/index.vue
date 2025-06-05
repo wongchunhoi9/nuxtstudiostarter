@@ -33,13 +33,24 @@
                                     
                                     <!-- <p>{{ post.description }}</p> -->
                                     
-                                    <!-- <NuxtImg src="img/testing/IMG_0083_rotate.jpeg" :alt="post.title" class=" w-full inset-0 bg-cover bg-center z-0" /> -->
+                                     <!-- Standard img tag for better initial performance -->
+                                    <!-- <img 
+                                        :src="post.img" 
+                                        :alt="post.title"
+                                        class="w-full inset-0 bg-cover bg-center z-0"
+                                        loading="lazy"
+                                    /> -->
+
+                                    <!-- Keep NuxtImg as comment for future reference -->
+                                  
                                     <NuxtImg 
                                         :src="`${post.img}`" 
                                         :alt="post.title"
                                         :modifiers="{ rotate: null }" 
                                         quality="80"
-                                        class=" w-full  inset-0 bg-cover bg-center z-0" />
+                                        class="w-full inset-0 bg-cover bg-center z-0" 
+                                    />
+                                    
 
 
                                 </div>

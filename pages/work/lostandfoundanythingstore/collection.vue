@@ -131,15 +131,17 @@ const previousImage = (media: string[]) => {
               :key="index"
               class="flex-shrink-0 w-24 h-24 overflow-hidden rounded-md shadow-lg"
             >
+              <!-- Add error handling and fallback -->
               <NuxtImg
-                :src="media"
+                :src="media.startsWith('/') ? media : `/${media}`"
                 :alt="`${post.FoundItemName} - Image ${index + 1}`"
-                class="w-full h-full object-conatin"
+                class="w-full h-full object-contain"
                 quality="80"
                 loading="lazy"
                 height="100"
                 width="100"
                 :modifiers="{ rotate: null }"
+                @error="(e) => e.target.src = '/placeholder.jpg'"
               />
             </div>
           </div>
