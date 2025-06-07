@@ -59,7 +59,7 @@ const previousImage = (media: string[]) => {
     </h1>
     
     <!-- Table Header -->
-    <div class="hidden md:grid md:grid-cols-[40px_80px_1.5fr_1fr_1fr_1fr] gap-4 py-2 px-4 bg-gray-100 font-medium text-sm">
+    <div class="hidden md:grid md:grid-cols-[40px_100px_1.5fr_1fr_1fr_1fr] gap-4 py-2 px-4 bg-gray-100 font-medium text-sm">
       <div>ID</div>
       <div>Thumb</div>
       <div>Item Name</div>
@@ -80,7 +80,7 @@ const previousImage = (media: string[]) => {
         <!-- Item Row -->
           <div
           @click="toggleItem(post.path)"
-          class="group grid md:grid-cols-[40px_80px_1.5fr_1fr_1fr_1fr] gap-4 py-4 px-4 cursor-pointer hover:bg-gray-50"
+          class="group grid md:grid-cols-[40px_100px_1.5fr_1fr_1fr_1fr] gap-4 py-4 px-4 cursor-pointer hover:bg-gray-50"
           >
             <!-- ID Column -->
             <div class="flex ">
@@ -90,11 +90,15 @@ const previousImage = (media: string[]) => {
             <div class="relative">
               <!-- Main Thumbnail -->
               <div class="w-16 h-16 rounded-md overflow-hidden">
-                <img
+                <NuxtImg
                   :src="post.media?.[0] || '/placeholder.jpg'"
                   :alt="post.FoundItemName"
                   class="w-full h-full object-cover"
                   loading="lazy"
+                  quality="50"
+                  width="100"
+                  height="100"
+                  :modifiers="{ rotate: null }"
                 />
               </div>
             </div>
@@ -123,7 +127,7 @@ const previousImage = (media: string[]) => {
     </div>
 
         <!-- Thumbnails Preview Row -->
-        <div
+        <!-- <div
           v-if="hoveredItem === post.path && post.media?.length"
           class="px-4 pb-4 transition-all duration-300"
         >
@@ -133,21 +137,16 @@ const previousImage = (media: string[]) => {
               :key="index"
               class="flex-shrink-0 w-24 h-24 overflow-hidden rounded-md shadow-lg"
             >
-              <!-- Add error handling and fallback -->
-              <NuxtImg
-                :src="media.startsWith('/') ? media : `/${media}`"
-                :alt="`${post.FoundItemName} - Image ${index + 1}`"
-                class="w-full h-full object-contain"
-                quality="80"
-                loading="lazy"
-                height="100"
-                width="100"
-                :modifiers="{ rotate: null }"
-                @error="(e) => e.target.src = '/placeholder.jpg'"
-              />
+               <img
+                    :src="media.startsWith('/') ? media : `/${media}`"
+                    :alt="`${post.FoundItemName} - Image ${index + 2}`"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                    @error="(e) => e.target.src = '/placeholder.jpg'"
+                  />
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- Replace the Expanded Content section -->
         <div
@@ -217,20 +216,21 @@ const previousImage = (media: string[]) => {
               <h3 class="text-xl font-medium">{{ post.FoundItemName }}</h3>
               
               <div class="space-y-2 text-sm">
-                <p class="text-gray-600">{{ post.description }}</p>
+                <!-- <p class="text-gray-600">{{ post.description }}</p> -->
                 
                 <div class="grid gap-2">
                   <!-- ...existing specification fields... -->
                 </div>
 
                 <div class="mt-4 space-y-2 border-t pt-4">
-                  <h4 class="font-medium">Specifications:</h4>
+                  <!-- <h4 class="font-medium">Specifications:</h4> -->
+                  <p>{{ post.size }}</p>
                   <p>{{ post.spec1 }}</p>
                   <p>{{ post.spec2 }}</p>
                 </div>
 
                 <div class="mt-4 border-t pt-4" v-if="post.itemStoryEnglish || post.itemStoryChinese">
-                  <h4 class="font-medium mb-2">Item Story:</h4>
+                  <!-- <h4 class="font-medium mb-2">Item Story:</h4> -->
                   <p class="mb-2">{{ post.itemStoryEnglish }}</p>
                   <p class="font-noto-tc">{{ post.itemStoryChinese }}</p>
                 </div>
