@@ -15,13 +15,16 @@ featureInHome: 'yes'
 
 <!-- Lost and Found Anything Store is a long term project. The artist take the initiative to uncover and focus on the abandoned lost objects in certain sites, which will be transformed into digital 3D models and re-imagined in a half-realistic, half-inferential free-association. In the midst of the unpredictable objects, a small history is written with these young relics -->
 
-# Project Website: 
-::card
+# Project Website (depreciate soon): 
 
 [https://lostandfoundanythingstore.com/](https://lostandfoundanythingstore.com/)
-::
 
- For the List of objects and their corresponding 3D modeels, please visit [Lost and Found ANything Atore Website](https://lostandfoundanythingstore.com)  
+# Collection
+[here](/work/lostandfoundanythingstore/collection)
+
+
+
+ For the List of objects and their corresponding 3D modeels, please visit [Lost and Found Anything Atore Website](https://lostandfoundanythingstore.com)  
  All 3D model are free to download in my [sketchfab](https://sketchfab.com/wongchunhoi9) account
 
 ![Alt text](/img/lostandfoundanythingstore/collection1/lostandfound-elevator-poster-A2-01.jpg)

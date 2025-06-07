@@ -92,7 +92,7 @@ const previousImage = (path: string, media: string[]) => {
 <template>
   <div class="container mx-auto px-4">
     <h1 class="text-4xl  my-8 font-black ">
-      Lost and Found Anything Store 失物萬事屋 
+      Lost and Found Anything Store COLLECTION 失物萬事屋 
     </h1>
     
     <!-- Table Header -->
@@ -139,9 +139,9 @@ const previousImage = (path: string, media: string[]) => {
                 />
               </div>
             </div>
-            <div class="flex gap-2 ">
-              <span>{{ post.FoundItemNameEng }}</span>
-              <span>{{ post.FoundItemNameChi }}</span>
+            <div class=" gap-2 ">
+              <span class="block">{{ post.FoundItemNameEng }}</span>
+              <span class="block">{{ post.FoundItemNameChi }}</span>
             </div>
             <div>{{ post.whoFound || 'Unknown' }}</div>
             <div class="">
