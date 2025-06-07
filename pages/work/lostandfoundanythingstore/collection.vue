@@ -1,4 +1,7 @@
+
 <script setup lang="ts">
+import { ref, watch } from 'vue'
+
 interface LostItem {
   title: string
   date: string
@@ -89,7 +92,7 @@ const previousImage = (path: string, media: string[]) => {
 <template>
   <div class="container mx-auto px-4">
     <h1 class="text-4xl  my-8 font-black ">
-      Lost and Found Anything Store Collection
+      Lost and Found Anything Store 失物萬事屋 
     </h1>
     
     <!-- Table Header -->
@@ -107,14 +110,14 @@ const previousImage = (path: string, media: string[]) => {
       <div
         v-for="post in allPosts"
         :key="post.path"
-        class="border-b border-gray-200 last:border-b-0"
+        class="border-b border-gray-500 last:border-b-0"
         @mouseenter="handleHover(post.path)"
         @mouseleave="handleHover(null)"
       >
         <!-- Item Row -->
           <div
           @click="toggleItem(post.path)"
-          class="group grid md:grid-cols-[40px_100px_1.5fr_1fr_1fr_1fr] gap-4 py-4 px-4 cursor-pointer hover:bg-gray-50"
+          class="group grid md:grid-cols-[40px_100px_1.5fr_1fr_1fr_1fr] gap-4 py-4 px-4 cursor-pointer hover:bg-relayorange/10"
           >
             <!-- ID Column -->
             <div class="flex ">
@@ -123,11 +126,11 @@ const previousImage = (path: string, media: string[]) => {
             <!-- Thumbnail Column -->
             <div class="relative">
               <!-- Main Thumbnail -->
-              <div class="w-16 h-16 rounded-md overflow-hidden">
+              <div class="w-16 h-16 rounded-md">
                 <NuxtImg
                   :src="post.media?.[0] || '/placeholder.jpg'"
                   :alt="post.FoundItemNameEng"
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-contain"
                   loading="lazy"
                   quality="50"
                   width="100"
@@ -184,18 +187,32 @@ const previousImage = (path: string, media: string[]) => {
               </div>
             </div>
 
-            <!-- Image Gallery Column -->
-            <div class="w-full md:w-1/3 relative">
-              <div class="aspect-square rounded-lg overflow-hidden">
-                <NuxtImg
-                  v-if="post.media?.length"
-                  :src="post.media[currentImageIndices[post.path] || 0]"
-                  :alt="`${post.FoundItemNameEng} - Image ${(currentImageIndices[post.path] || 0) + 1}`"
-                  class="w-full h-full object-contain"
-                  quality="80"
-                  :modifiers="{ rotate: null }"
-                />
-              </div>
+        <!-- Image Gallery Column -->
+        <div class="w-full md:w-1/3 relative">
+          <div class="aspect-square rounded-lg overflow-hidden ">
+            <img
+              v-if="post.media?.length"
+              :src="post.media[currentImageIndices[post.path] || 0]?.startsWith('/') 
+                ? post.media[currentImageIndices[post.path] || 0] 
+                : `/${post.media[currentImageIndices[post.path] || 0]}`"
+              :alt="`${post.FoundItemNameEng} - Image ${(currentImageIndices[post.path] || 0) + 1}`"
+              class="w-full h-full object-contain"
+              @error="(e) => e.target.src = '/placeholder.jpg'"
+              loading="lazy"
+            />
+            <div 
+              v-else 
+              class="w-full h-full flex items-center justify-center text-gray-400"
+            >
+              No Images Available
+            </div>
+          </div>
+          <!-- Add console log for debugging -->
+          <!-- <div class="hidden">
+          {{ console.log('Current index:', currentImageIndices[post.path]) }}
+          {{ console.log('Current image:', post.media[currentImageIndices[post.path]]) }}
+          {{ console.log('Total images:', post.media?.length) }}
+          </div> -->
   
         <!-- Navigation Arrows -->
         <button 
