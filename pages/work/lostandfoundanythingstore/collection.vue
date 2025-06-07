@@ -45,18 +45,29 @@ const handleHover = (path: string | null) => {
 // Replace the currentImageIndex ref and navigation functions in the script section
 const currentImageIndices = ref<{ [key: string]: number }>({})
 
-// Initialize indices for each post
-if (allPosts.value) {
-  allPosts.value.forEach(post => {
-    currentImageIndices.value[post.path] = 0
-  })
-}
+// Watch for allPosts changes and initialize indices
+watch(() => allPosts.value, (posts) => {
+  if (posts) {
+    posts.forEach(post => {
+      if (!currentImageIndices.value[post.path]) {
+        currentImageIndices.value[post.path] = 0
+      }
+    })
+  }
+}, { immediate: true })
 
+// Update the navigation functions with null checks
 const nextImage = (path: string, media: string[]) => {
+  if (!currentImageIndices.value[path]) {
+    currentImageIndices.value[path] = 0
+  }
   currentImageIndices.value[path] = (currentImageIndices.value[path] + 1) % media.length
 }
 
 const previousImage = (path: string, media: string[]) => {
+  if (!currentImageIndices.value[path]) {
+    currentImageIndices.value[path] = 0
+  }
   currentImageIndices.value[path] = currentImageIndices.value[path] === 0 
     ? media.length - 1 
     : currentImageIndices.value[path] - 1
@@ -178,8 +189,8 @@ const previousImage = (path: string, media: string[]) => {
               <div class="aspect-square rounded-lg overflow-hidden">
                 <NuxtImg
                   v-if="post.media?.length"
-                  :src="post.media[currentImageIndices[post.path]]"
-                  :alt="`${post.FoundItemNameEng} - Image ${currentImageIndices[post.path] + 1}`"
+                  :src="post.media[currentImageIndices[post.path] || 0]"
+                  :alt="`${post.FoundItemNameEng} - Image ${(currentImageIndices[post.path] || 0) + 1}`"
                   class="w-full h-full object-contain"
                   quality="80"
                   :modifiers="{ rotate: null }"
@@ -212,7 +223,7 @@ const previousImage = (path: string, media: string[]) => {
           v-if="post.media?.length > 1"
           class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-xs md:text-sm"
         >
-          {{ currentImageIndices[post.path] + 1 }} / {{ post.media.length }}
+          {{ (currentImageIndices[post.path] || 0) + 1 }} / {{ post.media.length }}
         </div>
       </div>
 
