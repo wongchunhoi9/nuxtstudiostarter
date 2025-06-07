@@ -3,21 +3,24 @@ interface LostItem {
   title: string
   date: string
   time: string
-  FoundItemName: string
+  FoundItemNameEng: string
+  FoundItemNameChi: string
   customeID: string
   whoFound: string
-  foundLocation: string
+  foundLocationEng: string
+  foundLocationChi: string
   foundDate: string
   media: string[]
   active: boolean
   path: string
 }
 
+
 const route = useRoute()
 const { data: allPosts } = await useAsyncData(route.path, () => {
   return queryCollection('LostAndFoundAnythingStore')
     // .where({ active: true })
-    .order('date', 'DESC')
+    .order('customeID', 'ASC')
     .all()
 })
 
@@ -39,17 +42,37 @@ const handleHover = (path: string | null) => {
   }
 }
 
-const currentImageIndex = ref(0)
+// Replace the currentImageIndex ref and navigation functions in the script section
+const currentImageIndices = ref<{ [key: string]: number }>({})
 
-const nextImage = (media: string[]) => {
-  currentImageIndex.value = (currentImageIndex.value + 1) % media.length
+// Initialize indices for each post
+if (allPosts.value) {
+  allPosts.value.forEach(post => {
+    currentImageIndices.value[post.path] = 0
+  })
 }
 
-const previousImage = (media: string[]) => {
-  currentImageIndex.value = currentImageIndex.value === 0 
+const nextImage = (path: string, media: string[]) => {
+  currentImageIndices.value[path] = (currentImageIndices.value[path] + 1) % media.length
+}
+
+const previousImage = (path: string, media: string[]) => {
+  currentImageIndices.value[path] = currentImageIndices.value[path] === 0 
     ? media.length - 1 
-    : currentImageIndex.value - 1
+    : currentImageIndices.value[path] - 1
 }
+
+// const currentImageIndex = ref(0)
+
+// const nextImage = (media: string[]) => {
+//   currentImageIndex.value = (currentImageIndex.value + 1) % media.length
+// }
+
+// const previousImage = (media: string[]) => {
+//   currentImageIndex.value = currentImageIndex.value === 0 
+//     ? media.length - 1 
+//     : currentImageIndex.value - 1
+// }
 </script>
 
 <template>
@@ -92,7 +115,7 @@ const previousImage = (media: string[]) => {
               <div class="w-16 h-16 rounded-md overflow-hidden">
                 <NuxtImg
                   :src="post.media?.[0] || '/placeholder.jpg'"
-                  :alt="post.FoundItemName"
+                  :alt="post.FoundItemNameEng"
                   class="w-full h-full object-cover"
                   loading="lazy"
                   quality="50"
@@ -102,11 +125,15 @@ const previousImage = (media: string[]) => {
                 />
               </div>
             </div>
-            <div class="flex ">
-              <span>{{ post.FoundItemName }}</span>
+            <div class="flex gap-2 ">
+              <span>{{ post.FoundItemNameEng }}</span>
+              <span>{{ post.FoundItemNameChi }}</span>
             </div>
             <div>{{ post.whoFound || 'Unknown' }}</div>
-            <div>{{ post.foundLocation || 'Unknown' }}</div>
+            <div class="">
+              <span class="block">{{ post.foundLocationEng || 'Unknown' }}</span>
+              <span>{{ post.foundLocationChi || 'Unknown'  }}</span>
+            </div>
       <div class="flex  justify-between">
         <span>{{ post.foundDate || 'Unknown' }}</span>
         <svg
@@ -125,28 +152,6 @@ const previousImage = (media: string[]) => {
         </svg>
       </div>
     </div>
-
-        <!-- Thumbnails Preview Row -->
-        <!-- <div
-          v-if="hoveredItem === post.path && post.media?.length"
-          class="px-4 pb-4 transition-all duration-300"
-        >
-          <div class="flex gap-4 overflow-x-auto pb-2">
-            <div
-              v-for="(media, index) in post.media"
-              :key="index"
-              class="flex-shrink-0 w-24 h-24 overflow-hidden rounded-md shadow-lg"
-            >
-               <img
-                    :src="media.startsWith('/') ? media : `/${media}`"
-                    :alt="`${post.FoundItemName} - Image ${index + 2}`"
-                    class="w-full h-full object-cover"
-                    loading="lazy"
-                    @error="(e) => e.target.src = '/placeholder.jpg'"
-                  />
-            </div>
-          </div>
-        </div> -->
 
         <!-- Replace the Expanded Content section -->
         <div
@@ -173,47 +178,48 @@ const previousImage = (media: string[]) => {
               <div class="aspect-square rounded-lg overflow-hidden">
                 <NuxtImg
                   v-if="post.media?.length"
-                  :src="post.media[currentImageIndex]"
-                  :alt="`${post.FoundItemName} - Image ${currentImageIndex + 1}`"
+                  :src="post.media[currentImageIndices[post.path]]"
+                  :alt="`${post.FoundItemNameEng} - Image ${currentImageIndices[post.path] + 1}`"
                   class="w-full h-full object-contain"
                   quality="80"
                   :modifiers="{ rotate: null }"
                 />
               </div>
-              
-              <!-- Navigation Arrows -->
-              <button 
-                v-if="post.media?.length > 1"
-                @click.stop="previousImage(post.media)"
-                class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 md:p-3 rounded-full"
-              >
-                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              
-              <button 
-                v-if="post.media?.length > 1"
-                @click.stop="nextImage(post.media)"
-                class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 md:p-3 rounded-full"
-              >
-                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
+  
+        <!-- Navigation Arrows -->
+        <button 
+          v-if="post.media?.length > 1"
+          @click.stop="previousImage(post.path, post.media)"
+          class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 md:p-3 rounded-full"
+        >
+          <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        
+        <button 
+          v-if="post.media?.length > 1"
+          @click.stop="nextImage(post.path, post.media)"
+          class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 md:p-3 rounded-full"
+        >
+          <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
 
-              <!-- Image Counter -->
-              <div 
-                v-if="post.media?.length > 1"
-                class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-xs md:text-sm"
-              >
-                {{ currentImageIndex + 1 }} / {{ post.media?.length }}
-              </div>
-            </div>
+        <!-- Image Counter -->
+        <div 
+          v-if="post.media?.length > 1"
+          class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-xs md:text-sm"
+        >
+          {{ currentImageIndices[post.path] + 1 }} / {{ post.media.length }}
+        </div>
+      </div>
 
             <!-- Information Column -->
             <div class="w-full md:w-1/3 space-y-4 mt-4 md:mt-0">
-              <h3 class="text-xl font-medium">{{ post.FoundItemName }}</h3>
+              <h3 class="text-xl font-medium">{{ post.FoundItemNameEng }}</h3>
+              <h3 class="text-xl font-medium">{{ post.FoundItemNameChi }}</h3>
               
               <div class="space-y-2 text-sm">
                 <!-- <p class="text-gray-600">{{ post.description }}</p> -->
@@ -229,10 +235,11 @@ const previousImage = (media: string[]) => {
                   <p>{{ post.spec2 }}</p>
                 </div>
 
-                <div class="mt-4 border-t pt-4" v-if="post.itemStoryEnglish || post.itemStoryChinese">
+                <div class="mt-4 border-t pt-4">
                   <!-- <h4 class="font-medium mb-2">Item Story:</h4> -->
-                  <p class="mb-2">{{ post.itemStoryEnglish }}</p>
-                  <p class="font-noto-tc">{{ post.itemStoryChinese }}</p>
+                  <!-- <p class="mb-2">{{ post.itemStoryEnglish }}</p>
+                  <p class="font-noto-tc">{{ post.itemStoryChinese }}</p> -->
+                  <ContentRenderer :value="post" class="text-sm"/>
                 </div>
               </div>
             </div>
