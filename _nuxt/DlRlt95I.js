@@ -1,0 +1,1 @@
+import{_ as a}from"./DlAUqK2U.js";import{e as s,f as o,a3 as n}from"./DO-o61tz.js";const t={},l={class:"h-auto max-w-full md:col-span-2 xl:col-span-3"};function r(e,c){return o(),s("div",l,[n(e.$slots,"default")])}const f=Object.assign(a(t,[["render",r]]),{__name:"ImageGallerySpan2"});export{f as default};
